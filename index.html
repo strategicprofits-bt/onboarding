@@ -6,13 +6,13 @@
   <title>Quick Start — Strategic Profits</title>
   <meta name="description" content="Set up the workspace where Claude works alongside you. Step-by-step setup for Strategic Profits members.">
   <meta property="og:title" content="Quick Start — Set up your AI workspace">
-  <meta property="og:description" content="Set up the workspace where Claude works alongside you. About 10 minutes.">
+  <meta property="og:description" content="Set up the workspace where Claude works alongside you. About 25 minutes.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://onboarding.strategicprofits.com">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Quick Start — Strategic Profits">
-  <meta name="twitter:description" content="Set up the workspace where Claude works alongside you. About 10 minutes.">
-  <link rel="stylesheet" href="/style.css">
+  <meta name="twitter:description" content="Set up the workspace where Claude works alongside you. About 25 minutes.">
+  <link rel="stylesheet" href="/style.css?v=20260506">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 </head>
 <body>
@@ -38,7 +38,7 @@
         <p class="hero-sub">Set up the workspace where Claude works alongside you. Everything else in the program builds on this.</p>
         <div class="hero-time">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>About 10 minutes</span>
+          <span>About 25 minutes</span>
         </div>
       </div>
     </section>
@@ -46,11 +46,11 @@
     <section class="prereqs" id="setup">
       <div class="container">
         <h2>Before you start</h2>
-        <div class="checklist">
-          <label class="checklist-item"><input type="checkbox" disabled> A paid Claude account (Pro or Team)</label>
-          <label class="checklist-item"><input type="checkbox" disabled checked> ~10 minutes</label>
-          <label class="checklist-item"><input type="checkbox" disabled checked> A Mac or Windows computer</label>
-        </div>
+        <ul class="prereqs-list">
+          <li>A paid Claude account (Pro, Max, Team, or Enterprise)</li>
+          <li>About 25 minutes</li>
+          <li>A Mac or Windows computer</li>
+        </ul>
         <p class="prereqs-note">Don't have Claude yet? <a href="https://claude.com/download" target="_blank" rel="noopener">Download the desktop app</a> and sign up for a paid plan first.</p>
       </div>
     </section>
@@ -59,20 +59,23 @@
       <div class="container">
         <h2 class="sr-only">Setup Steps</h2>
 
-        <div class="steps-toolbar">
-          <div class="step-pills" role="navigation" aria-label="Step progress">
-            <a href="#step-1" class="step-pill" data-step="1">1</a>
-            <a href="#step-2" class="step-pill" data-step="2">2</a>
-            <a href="#step-3" class="step-pill" data-step="3">3</a>
-            <a href="#step-4" class="step-pill" data-step="4">4</a>
-            <a href="#step-5" class="step-pill" data-step="5">5</a>
-            <a href="#step-6" class="step-pill" data-step="6">6</a>
-          </div>
+        <aside class="steps-nav" id="steps-nav" aria-label="Step outline">
+          <nav>
+            <a href="#step-1" class="steps-nav-item" data-step="1"><span class="steps-nav-num">1</span> Install Claude Desktop</a>
+            <a href="#step-2" class="steps-nav-item" data-step="2"><span class="steps-nav-num">2</span> Sign in</a>
+            <a href="#step-3" class="steps-nav-item" data-step="3"><span class="steps-nav-num">3</span> Install Obsidian</a>
+            <a href="#step-4" class="steps-nav-item" data-step="4"><span class="steps-nav-num">4</span> Create your vault</a>
+            <a href="#step-5" class="steps-nav-item" data-step="5"><span class="steps-nav-num">5</span> Connect Claude to vault</a>
+            <a href="#step-6" class="steps-nav-item" data-step="6"><span class="steps-nav-num">6</span> Test the connection</a>
+            <a href="#step-7" class="steps-nav-item" data-step="7"><span class="steps-nav-num">7</span> Turn on auto mode</a>
+            <a href="#step-8" class="steps-nav-item" data-step="8"><span class="steps-nav-num">8</span> Connect your tools</a>
+            <a href="#step-9" class="steps-nav-item" data-step="9"><span class="steps-nav-num">9</span> Set up Key Vault</a>
+          </nav>
           <div class="os-toggle" role="radiogroup" aria-label="Operating system">
             <button class="os-btn active" data-os="mac" role="radio" aria-checked="true">Mac</button>
             <button class="os-btn" data-os="win" role="radio" aria-checked="false">Windows</button>
           </div>
-        </div>
+        </aside>
 
         <div class="step" id="step-1">
           <div class="step-number" aria-hidden="true">1</div>
@@ -81,7 +84,7 @@
               <h3>Download and install Claude Desktop</h3>
               <span class="step-time">~2 min</span>
             </div>
-            <p class="step-context">Step 1 of 6</p>
+            <p class="step-context">Step 1 of 9</p>
             <p>Head over to <a href="https://claude.com/download" target="_blank" rel="noopener">claude.com/download</a>.</p>
             <div class="os-mac">
               <ol>
@@ -109,7 +112,7 @@
               <h3>Sign in to Claude Desktop</h3>
               <span class="step-time">~1 min</span>
             </div>
-            <p class="step-context">Step 2 of 6</p>
+            <p class="step-context">Step 2 of 9</p>
             <p>Open the Claude Desktop app.</p>
             <ul>
               <li>If you see a sign-in prompt, sign in with the email you used when you joined the program.</li>
@@ -131,7 +134,7 @@
               <h3>Download and install Obsidian</h3>
               <span class="step-time">~2 min</span>
             </div>
-            <p class="step-context">Step 3 of 6</p>
+            <p class="step-context">Step 3 of 9</p>
             <p>Head over to <a href="https://obsidian.md/" target="_blank" rel="noopener">obsidian.md</a>.</p>
             <div class="os-mac">
               <ol>
@@ -159,7 +162,7 @@
               <h3>Create your Obsidian vault</h3>
               <span class="step-time">~2 min</span>
             </div>
-            <p class="step-context">Step 4 of 6</p>
+            <p class="step-context">Step 4 of 9</p>
             <p>A "vault" is just a folder on your computer where Obsidian keeps your work. Don't overthink it.</p>
 
             <!-- TODO: Embed 60-90 second Loom walkthrough of Steps 4-6 -->
@@ -221,7 +224,7 @@
               <h3>Connect Claude Code to your vault</h3>
               <span class="step-time">~1 min</span>
             </div>
-            <p class="step-context">Step 5 of 6</p>
+            <p class="step-context">Step 5 of 9</p>
             <p>This is the step that makes the magic happen — Claude Code being able to actually read and write inside your Obsidian vault.</p>
             <ol>
               <li>In Claude Desktop, click the <strong>Code</strong> tab in the sidebar</li>
@@ -245,7 +248,7 @@
               <h3>Test the connection</h3>
               <span class="step-time">~1 min</span>
             </div>
-            <p class="step-context">Step 6 of 6 — Verification</p>
+            <p class="step-context">Step 6 of 9 — Verification</p>
             <p>Time to make sure the two apps are actually talking to each other.</p>
             <p>In Claude Code, paste this prompt:</p>
             <div class="code-block">
@@ -275,14 +278,200 @@
           </div>
         </div>
 
+        <div class="step" id="step-7">
+          <div class="step-number" aria-hidden="true">7</div>
+          <div class="step-content">
+            <div class="step-header">
+              <h3>Let Claude work without interruption</h3>
+              <span class="step-time">~2 min</span>
+            </div>
+            <p class="step-context">Step 7 of 9</p>
+            <p>By default, Claude asks for permission before every action — every file it creates, every command it runs. That's safe, but it gets in the way fast. Auto mode flips this: a separate safety system reviews each action <em>before</em> Claude takes it, blocks anything risky, and lets the safe stuff run automatically.</p>
+            <p>You stay in control. Claude stops interrupting you.</p>
+
+            <details class="faq-item">
+              <summary>What auto mode actually does</summary>
+              <div class="faq-body">
+                <p>Before every action Claude takes, a separate classifier reviews it. Things like creating files in your vault or running normal commands get a green light automatically. Things like deleting files outside your vault, sending data to unknown places, or running suspicious code get blocked and require your manual approval.</p>
+                <p>You can turn auto mode off any time. You can also tell Claude in the chat "wait until I review before deploying" and the classifier will enforce that until you say otherwise.</p>
+              </div>
+            </details>
+
+            <div class="callout callout-warning">
+              <strong>Auto mode requires a Claude Max, Team, or Enterprise plan.</strong> If you're on the Pro plan, this option won't be available — see the fallback at the bottom of this step.
+            </div>
+
+            <h4 class="substep">7a. Enable auto mode in your account</h4>
+            <ol>
+              <li>Go to <a href="https://claude.com/settings" target="_blank" rel="noopener">claude.com/settings</a> in your browser</li>
+              <li>Find the <strong>Claude Code</strong> section</li>
+              <li>Toggle <strong>Allow auto permissions mode</strong> ON</li>
+              <li>Save</li>
+            </ol>
+            <p>If you're on a Team or Enterprise plan and don't see this toggle, your admin needs to enable it in Organization Settings &rarr; Claude Code first.</p>
+
+            <h4 class="substep">7b. Switch your current session into auto mode</h4>
+            <ol>
+              <li>Go back to Claude Desktop, Code tab</li>
+              <li>Look at the bottom of the chat for the permission mode indicator</li>
+              <li>Press <kbd>Shift</kbd>+<kbd>Tab</kbd> to cycle through modes: default &rarr; acceptEdits &rarr; plan &rarr; auto</li>
+              <li>When you see <strong>auto</strong> in the indicator, you're done</li>
+              <li>The first time you cycle to auto, you'll see an opt-in prompt — accept it</li>
+            </ol>
+            <div class="callout callout-info">
+              If auto mode is greyed out, restart Claude Desktop completely (quit and reopen) and try again. The settings change sometimes needs a restart to take effect.
+            </div>
+
+            <!-- Verification -->
+            <div class="result-grid">
+              <div class="result-card result-success">
+                <div class="result-icon" aria-hidden="true">&#10003;</div>
+                <div>
+                  <strong>You're in auto mode when:</strong> the indicator at the bottom of the Code tab says <code>auto</code>. Type <em>"Create a file called test-auto.md in my vault with the words 'auto mode works' inside it"</em> and Claude should do it without asking permission. Open Obsidian and confirm the file is there. Delete it when you're satisfied.
+                </div>
+              </div>
+              <div class="result-card result-fail">
+                <div class="result-icon" aria-hidden="true">&#10007;</div>
+                <div>
+                  <strong>Auto mode is greyed out or you're on the Pro plan?</strong>
+                  <p>Cycle to <strong>acceptEdits</strong> instead (Shift+Tab once from default). You'll get auto-approval on file changes, but Claude will still ask before running terminal commands. You can come back and enable auto mode later if you upgrade.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step" id="step-8">
+          <div class="step-number" aria-hidden="true">8</div>
+          <div class="step-content">
+            <div class="step-header">
+              <h3>Connect your tools</h3>
+              <span class="step-time">~5 min</span>
+            </div>
+            <p class="step-context">Step 8 of 9</p>
+            <p>Claude can already read and write inside your Obsidian vault. Now we're going to give it access to the other tools you use every day — your email, calendar, files, the systems your business already runs on.</p>
+
+            <h4 class="substep">8a. Built-in connectors (~3 min)</h4>
+            <p>Claude Desktop has built-in connectors for the tools most owners use. These are one-click — no API keys, no copy-paste. You sign in with your existing account and Claude can use that tool from then on.</p>
+            <p><strong>Connect at minimum:</strong></p>
+            <ul>
+              <li><strong>Gmail</strong> — so Claude can read and draft emails</li>
+              <li><strong>Google Drive</strong> — so Claude can read documents you already have</li>
+              <li><strong>GitHub</strong> — so Claude can manage code and shared content from Strategic Profits</li>
+              <li><strong>Slack</strong> — so Claude can read messages and post on your behalf</li>
+            </ul>
+            <p><strong>Optional but useful:</strong> Google Calendar, Notion, Asana, Linear — connect any others you actually use.</p>
+            <ol>
+              <li>In Claude Desktop, click the <strong>Settings</strong> gear (top-right corner)</li>
+              <li>Click the <strong>Connectors</strong> tab</li>
+              <li>For each tool, click <strong>Connect</strong> &rarr; sign in &rarr; click <strong>Allow</strong></li>
+              <li>Repeat for each tool</li>
+            </ol>
+            <div class="callout callout-info">
+              <strong>What Claude can see vs. what stays private:</strong> When you connect Gmail, Claude can read and send emails when you ask it to. It does NOT read your inbox in the background. Same for every other connector — Claude only acts when you tell it to.
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card result-success">
+                <div class="result-icon" aria-hidden="true">&#10003;</div>
+                <div>
+                  <strong>Each connector works when:</strong> in the Chat tab, type <em>"What can you see in my [tool]?"</em> and Claude responds with a real summary.
+                </div>
+              </div>
+            </div>
+
+            <h4 class="substep">8b. Strategic Profits connectors (~2 min)</h4>
+            <p>Two connectors are specific to Strategic Profits. We'll set them up using a built-in skill that handles all the details.</p>
+            <p><strong>You'll need:</strong> your SP API key (starts with <code>sk_sp_</code>, emailed to you when you enrolled).</p>
+
+            <p><strong>SP Shared:</strong> In Claude Desktop, Code tab, type:</p>
+            <div class="code-block">
+              <code>/sp-connect sp-mcp</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>The skill will ask for your SP API key, run the connection, and verify it worked. Restart Claude Code when it finishes.</p>
+
+            <p><strong>GoHighLevel</strong> (only if your business uses GHL — skip if you don't):</p>
+            <div class="code-block">
+              <code>/sp-connect ghl</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>The skill will ask for your Private Integration Token and Location ID, then handle everything.</p>
+
+            <div class="callout callout-info">
+              <strong>About <code>/sp-connect</code>:</strong> This is a Strategic Profits skill that handles all connection setup. Run <code>/sp-connect status</code> any time to see what's connected, or <code>/sp-connect repair</code> to fix broken connections.
+            </div>
+          </div>
+        </div>
+
+        <div class="step" id="step-9">
+          <div class="step-number" aria-hidden="true">9</div>
+          <div class="step-content">
+            <div class="step-header">
+              <h3>Set up your Key Vault</h3>
+              <span class="step-time">~8 min</span>
+            </div>
+            <p class="step-context">Step 9 of 9</p>
+            <p>As you go through the program, Claude is going to need access to other tools — Stripe to read your payments, Replicate to generate images, MailerLite to send emails, and dozens of other services depending on what you build.</p>
+            <p>Each of those tools gives you something called an <strong>API key</strong> — a long string of characters that proves it's you. You don't want those keys scattered across config files on your computer where you'll lose them.</p>
+            <p><strong>Think of this like 1Password, but for Claude.</strong> One vault, all your devices, never lose a key again.</p>
+
+            <p>We use a tool called <strong>Doppler</strong> for this. It's free for personal use, takes a few minutes to set up, and means:</p>
+            <ul>
+              <li>All your API keys live in one place</li>
+              <li>Your keys sync to every device you use Claude on</li>
+              <li>When Claude says "I can't find your X key," there's exactly one place to look</li>
+              <li>When you change a key, every device picks up the new value automatically</li>
+            </ul>
+
+            <p>In Claude Desktop, Code tab, type:</p>
+            <div class="code-block">
+              <code>/sp-connect doppler</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>The skill will walk you through everything: creating a Doppler account, installing the CLI, logging in, setting up your project, and verifying it works. Just answer its questions when it asks.</p>
+
+            <div class="callout callout-info">
+              <strong>Adding keys later:</strong> Any time a service gives you an API key, just tell Claude: <em>"Add my Stripe key to Doppler. Here it is: rk_live_..."</em> — Claude knows how to do the rest.
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>Multiple devices?</strong> When you set up a second computer, just run <code>/sp-connect doppler</code> again — it'll detect your existing account and project, log you in, and all your keys are available immediately.
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card result-success">
+                <div class="result-icon" aria-hidden="true">&#10003;</div>
+                <div>
+                  <strong>Doppler is connected when:</strong> the skill reports your project name and config. Run <code>/sp-connect status</code> any time to verify.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <section class="done">
       <div class="container">
         <div class="done-card">
-          <h2>Setup complete</h2>
-          <p>You now have a workspace where Claude can read, write, and build alongside you.</p>
+          <h2>You're fully set up</h2>
+          <p>Take a look at what you just built:</p>
+          <ul class="done-checklist">
+            <li>Claude Desktop installed and signed in</li>
+            <li>Obsidian vault created and connected to Claude</li>
+            <li>Auto mode enabled — Claude works without interrupting you</li>
+            <li>Your tools connected — Gmail, Drive, GitHub, Slack, Strategic Profits, GHL</li>
+            <li>Doppler vault connected — every API key has a home</li>
+          </ul>
+          <p>This is the foundation. Everything Strategic Profits teaches you from here builds on this.</p>
 
           <!-- TODO: Replace href and label with actual Part 2 URL and name -->
           <a href="#" class="done-cta">Continue to Part 2 &rarr;</a>
@@ -371,6 +560,38 @@
           </details>
 
           <details class="faq-item">
+            <summary>Auto mode is greyed out</summary>
+            <div class="faq-body">
+              <p>Quit Claude Desktop completely and reopen it. The settings change requires a full restart. If still greyed out, you may be on a Team or Enterprise plan where the toggle is in your admin's Organization Settings &rarr; Claude Code instead of your personal settings.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>A connector keeps disconnecting</summary>
+            <div class="faq-body">
+              <p>Some connectors (especially Google ones) require periodic re-authentication. If a connector stops working after a few weeks, go back to Settings &rarr; Connectors, click Disconnect, then Connect again.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Claude says it can't find an API key you added to Doppler</summary>
+            <div class="faq-body">
+              <p>Two common causes:</p>
+              <ol>
+                <li>Your Claude Code session was started before Doppler was connected. Close the Code tab and start a new session.</li>
+                <li>The key was added to a different Doppler config (e.g., prod instead of dev). Run <code>doppler configs</code> to see which configs have which keys.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Doppler login won't complete</summary>
+            <div class="faq-body">
+              <p>Run <code>doppler login --no-browser</code> and copy the URL into your browser manually. Some corporate firewalls block the auto-launch behavior.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
             <summary>Still stuck?</summary>
             <div class="faq-body">
               <p>Post in the Strategic Profits community and tag either <strong>Jem Erroba</strong> or <strong>Tom Hammaker</strong> — they'll get back to you shortly.</p>
@@ -398,21 +619,21 @@
         var pct = h.scrollTop / (h.scrollHeight - h.clientHeight);
         document.getElementById('progress-bar').style.transform = 'scaleX(' + (pct || 0) + ')';
         document.getElementById('nav').classList.toggle('nav-scrolled', window.scrollY > 40);
-        updateStepPills();
+        updateStepNav();
       });
     }
     window.addEventListener('scroll', onScroll, { passive: true });
 
-    function updateStepPills() {
+    function updateStepNav() {
       var steps = document.querySelectorAll('.step');
-      var pills = document.querySelectorAll('.step-pill');
+      var items = document.querySelectorAll('.steps-nav-item');
       var current = 0;
       for (var i = 0; i < steps.length; i++) {
         if (steps[i].getBoundingClientRect().top < window.innerHeight * 0.5) current = i;
       }
-      for (var j = 0; j < pills.length; j++) {
-        pills[j].classList.toggle('active', j === current);
-        pills[j].classList.toggle('done', j < current);
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.toggle('active', j === current);
+        items[j].classList.toggle('done', j < current);
       }
     }
 
@@ -444,7 +665,7 @@
       });
     }
 
-    updateStepPills();
+    updateStepNav();
   </script>
 </body>
 </html>

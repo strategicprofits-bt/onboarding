@@ -7,4 +7,4 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 /style.css
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600, must-revalidate
