@@ -291,6 +291,23 @@ a:hover {
   flex-shrink: 0;
 }
 
+/* ========== Mental Model ========== */
+
+.mental-model {
+  padding: 0 0 64px;
+}
+
+.mental-model h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.mental-model h3 {
+  color: var(--color-text);
+}
+
 /* ========== Prerequisites / Checklist ========== */
 
 .prereqs {
