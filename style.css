@@ -364,7 +364,7 @@ a:hover {
   border-top: 1px solid var(--color-border-light);
 }
 
-.step:first-child {
+.step:first-of-type {
   border-top: none;
 }
 
