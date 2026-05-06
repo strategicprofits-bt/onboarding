@@ -613,6 +613,110 @@ body[data-os="win"] .os-mac { display: none; }
   border-left-color: var(--color-tip-border);
 }
 
+/* ========== API Key Lookup Form ========== */
+
+.key-lookup-form {
+  margin-top: 12px;
+}
+
+.key-lookup-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.key-lookup-row input[type="email"] {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font);
+  font-size: 15px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.key-lookup-row input[type="email"]:focus {
+  border-color: var(--color-accent);
+}
+
+.key-lookup-btn {
+  padding: 10px 20px;
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.key-lookup-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+.key-lookup-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.key-lookup-result {
+  margin-top: 8px;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+.key-lookup-success {
+  color: var(--color-success);
+}
+
+.key-lookup-error {
+  color: var(--color-fail);
+}
+
+/* ========== Download Link ========== */
+
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  margin: 8px 0;
+}
+
+.download-link:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .key-lookup-row {
+    flex-direction: column;
+  }
+
+  .key-lookup-row input[type="email"] {
+    width: 100%;
+  }
+
+  .key-lookup-btn {
+    width: 100%;
+  }
+}
+
 /* ========== Code Block ========== */
 
 .code-block {
