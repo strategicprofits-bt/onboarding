@@ -3,14 +3,32 @@
    Light, Anthropic-like docs aesthetic
    ======================================== */
 
+/* Self-hosted Inter (latin + latin-ext) */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(/fonts/inter-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(/fonts/inter-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 :root {
   --color-bg: #fafaf9;
   --color-surface: #ffffff;
   --color-text: #1a1a1a;
   --color-text-secondary: #6b6b6b;
-  --color-accent: #c96442;
+  --color-accent: #A8512F;
   --color-accent-light: #f8ece6;
-  --color-accent-hover: #b5563a;
+  --color-accent-hover: #8F4528;
   --color-border: #e8e5e1;
   --color-border-light: #f0eeeb;
   --color-warning-bg: #fef7ed;
@@ -58,14 +76,57 @@ body {
   padding: 0 24px;
 }
 
+/* MF-2: Focus styles for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* SF-2: Skip to content link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  padding: 8px 16px;
+  background: var(--color-accent);
+  color: white;
+  border-radius: 0 0 6px 6px;
+  z-index: 200;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+  color: white;
+}
+
+/* SF-5: Link underline affordance */
 a {
   color: var(--color-accent);
-  text-decoration: none;
-  transition: color 0.15s;
+  text-decoration-line: underline;
+  text-decoration-color: rgba(168, 81, 47, 0.3);
+  text-underline-offset: 2px;
+  transition: color 0.15s, text-decoration-color 0.15s;
 }
 
 a:hover {
   color: var(--color-accent-hover);
+  text-decoration-color: currentColor;
+}
+
+/* SF-7: Visually hidden utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ========== Nav ========== */
@@ -103,10 +164,12 @@ a:hover {
   font-size: 15px;
   color: var(--color-text);
   letter-spacing: -0.01em;
+  text-decoration: none;
 }
 
 .nav-brand:hover {
   color: var(--color-text);
+  text-decoration: none;
 }
 
 .nav-links {
@@ -119,10 +182,12 @@ a:hover {
   font-size: 14px;
   font-weight: 500;
   color: var(--color-text-secondary);
+  text-decoration: none;
 }
 
 .nav-links a:hover {
   color: var(--color-text);
+  text-decoration: none;
 }
 
 .nav-cta {
@@ -133,11 +198,17 @@ a:hover {
   font-size: 13px !important;
   font-weight: 500;
   transition: background 0.15s;
+  text-decoration: none !important;
 }
 
 .nav-cta:hover {
   background: var(--color-accent-hover);
   color: white !important;
+}
+
+.nav-cta:focus-visible {
+  outline-color: white;
+  outline-offset: 3px;
 }
 
 /* ========== Progress Bar ========== */
@@ -147,10 +218,11 @@ a:hover {
   top: 60px;
   left: 0;
   height: 2px;
-  width: 0%;
+  width: 100%;
   background: var(--color-accent);
   z-index: 101;
-  transition: width 0.05s linear;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 /* ========== Hero ========== */
@@ -169,7 +241,6 @@ a:hover {
   border-radius: 20px;
   margin-bottom: 20px;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
 }
 
 .hero h1 {
@@ -191,7 +262,7 @@ a:hover {
 
 .hero-callout {
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: none;
   border-left: 3px solid var(--color-accent);
   padding: 20px 24px;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
@@ -317,7 +388,8 @@ a:hover {
   min-width: 0;
 }
 
-.step-content h2 {
+/* MF-3: Step headings are h3 */
+.step-content h3 {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.015em;
@@ -343,13 +415,15 @@ a:hover {
   font-weight: 600;
 }
 
-/* ========== Callouts ========== */
+/* ========== Callouts (SF-4: unified left-accent pattern) ========== */
 
 .callout {
   padding: 18px 22px;
-  border-radius: var(--radius-sm);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   margin: 18px 0;
   font-size: 15px;
+  border: none;
+  border-left: 3px solid;
 }
 
 .callout p {
@@ -366,17 +440,17 @@ a:hover {
 
 .callout-warning {
   background: var(--color-warning-bg);
-  border: 1px solid var(--color-warning-border);
+  border-left-color: var(--color-warning-border);
 }
 
 .callout-info {
   background: var(--color-info-bg);
-  border: 1px solid var(--color-info-border);
+  border-left-color: var(--color-info-border);
 }
 
 .callout-tip {
   background: var(--color-tip-bg);
-  border: 1px solid var(--color-tip-border);
+  border-left-color: var(--color-tip-border);
 }
 
 /* ========== Code Block ========== */
@@ -653,6 +727,12 @@ strong {
 
 /* ========== Responsive ========== */
 
+@media (max-width: 900px) {
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 640px) {
   body {
     font-size: 16px;
@@ -685,10 +765,6 @@ strong {
     font-size: 16px;
   }
 
-  .tips-grid {
-    grid-template-columns: 1fr;
-  }
-
   .done-card {
     padding: 28px 22px;
   }
@@ -696,4 +772,10 @@ strong {
   .nav-links a:not(.nav-cta) {
     display: none;
   }
+}
+
+/* SF-3: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
