@@ -3,7 +3,7 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://services.leadconnectorhq.com; frame-src https://www.loom.com
+  Content-Security-Policy: default-src 'self'; script-src 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://services.leadconnectorhq.com; frame-src https://www.loom.com; media-src 'self' https://pub-b04ba300135a421e8f1c915ca8c5cf63.r2.dev
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 /style.css

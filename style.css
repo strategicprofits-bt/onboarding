@@ -1112,6 +1112,22 @@ body[data-os="win"] .os-mac { display: none; }
   margin-top: auto;
 }
 
+/* ========== Welcome Video ========== */
+
+.welcome-video {
+  margin: 0 0 48px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: #000;
+}
+
+.welcome-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ========== Mental Model Content ========== */
 
 .mm-content {
