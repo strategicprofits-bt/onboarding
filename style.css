@@ -1596,6 +1596,23 @@ body[data-os="win"] .os-mac { display: none; }
   background: var(--color-accent-light);
 }
 
+.step-cta-link {
+  display: inline-block;
+  padding: 12px 32px;
+  background: var(--color-accent);
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  text-decoration: none !important;
+  transition: background 0.2s;
+}
+
+.step-cta-link:hover {
+  background: var(--color-accent-hover, #BF6532);
+  color: #fff !important;
+}
+
 .code-block-label {
   display: block;
   font-size: 11px;
