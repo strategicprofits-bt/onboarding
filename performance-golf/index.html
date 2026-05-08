@@ -105,7 +105,7 @@
               <form class="key-lookup-form" onsubmit="return lookupKeyPG(event)">
                 <div class="key-lookup-row">
                   <input type="email" id="key-lookup-email-pg" placeholder="you@example.com" required aria-label="Email address">
-                  <button type="submit" class="key-lookup-btn">Resend my key</button>
+                  <button type="submit" class="key-lookup-btn">Send My Key</button>
                 </div>
                 <div id="key-lookup-result-pg" class="key-lookup-result" aria-live="polite"></div>
               </form>
@@ -283,7 +283,7 @@
         result.textContent = 'Something went wrong. Try again, or email mail@strategicprofits.com for help.';
       }).finally(function() {
         btn.disabled = false;
-        btn.textContent = 'Resend my key';
+        btn.textContent = 'Send My Key';
       });
       return false;
     }
