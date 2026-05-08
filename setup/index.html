@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Setup — Strategic Profits</title>
   <meta name="description" content="Set up the workspace where Claude works alongside you. Watch the video or follow step-by-step.">
-  <link rel="stylesheet" href="/style.css?v=20260508">
+  <link rel="stylesheet" href="/style.css?v=20260508b">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 </head>
 <body>
@@ -104,6 +104,7 @@
             <a href="#step-7" class="steps-nav-item" data-step="7"><span class="steps-nav-num">7</span> Turn on auto mode</a>
             <a href="#step-8" class="steps-nav-item" data-step="8"><span class="steps-nav-num">8</span> Connect your tools</a>
             <a href="#step-9" class="steps-nav-item" data-step="9"><span class="steps-nav-num">9</span> Set up Key Vault</a>
+            <a href="#step-10" class="steps-nav-item" data-step="10"><span class="steps-nav-num">10</span> Connect to SP</a>
           </nav>
           <div class="os-toggle" role="radiogroup" aria-label="Operating system">
             <button class="os-btn active" data-os="mac" role="radio" aria-checked="true">Mac</button>
@@ -118,7 +119,7 @@
               <h3>Download and install Claude Desktop</h3>
               <span class="step-time">~2 min</span>
             </div>
-            <p class="step-context">Step 1 of 9</p>
+            <p class="step-context">Step 1 of 10</p>
             <p>Head over to <a href="https://claude.com/download" target="_blank" rel="noopener">claude.com/download</a>.</p>
             <div class="os-mac">
               <ol>
@@ -146,7 +147,7 @@
               <h3>Sign in to Claude Desktop</h3>
               <span class="step-time">~1 min</span>
             </div>
-            <p class="step-context">Step 2 of 9</p>
+            <p class="step-context">Step 2 of 10</p>
             <p>Open the Claude Desktop app.</p>
             <ul>
               <li>If you see a sign-in prompt, sign in with the email you used when you joined the program.</li>
@@ -167,7 +168,7 @@
               <h3>Download and install Obsidian</h3>
               <span class="step-time">~2 min</span>
             </div>
-            <p class="step-context">Step 3 of 9</p>
+            <p class="step-context">Step 3 of 10</p>
             <p>Head over to <a href="https://obsidian.md/" target="_blank" rel="noopener">obsidian.md</a>.</p>
             <div class="os-mac">
               <ol>
@@ -195,7 +196,7 @@
               <h3>Create your Obsidian vault</h3>
               <span class="step-time">~2 min</span>
             </div>
-            <p class="step-context">Step 4 of 9</p>
+            <p class="step-context">Step 4 of 10</p>
             <p>A "vault" is just a folder on your computer where Obsidian keeps your work. Don't overthink it.</p>
 
             <h4 class="substep">4a. Name your vault</h4>
@@ -247,7 +248,7 @@
               <h3>Connect Claude Code to your vault</h3>
               <span class="step-time">~1 min</span>
             </div>
-            <p class="step-context">Step 5 of 9</p>
+            <p class="step-context">Step 5 of 10</p>
             <p>This is the step that makes the magic happen — Claude Code being able to actually read and write inside your Obsidian vault.</p>
             <ol>
               <li>In Claude Desktop, click the <strong>Code</strong> tab in the sidebar</li>
@@ -270,7 +271,7 @@
               <h3>Test the connection</h3>
               <span class="step-time">~1 min</span>
             </div>
-            <p class="step-context">Step 6 of 9 — Verification</p>
+            <p class="step-context">Step 6 of 10 — Verification</p>
             <p>Time to make sure the two apps are actually talking to each other.</p>
             <p>In Claude Code, paste this prompt:</p>
             <div class="code-block">
@@ -307,7 +308,7 @@
               <h3>Let Claude work without interruption</h3>
               <span class="step-time">~2 min</span>
             </div>
-            <p class="step-context">Step 7 of 9</p>
+            <p class="step-context">Step 7 of 10</p>
             <p>By default, Claude asks for permission before every action — every file it creates, every command it runs. That's safe, but it gets in the way fast. Auto mode flips this: a separate safety system reviews each action <em>before</em> Claude takes it, blocks anything risky, and lets the safe stuff run automatically.</p>
             <p>You stay in control. Claude stops interrupting you.</p>
 
@@ -369,7 +370,7 @@
               <h3>Connect your tools</h3>
               <span class="step-time">~5 min</span>
             </div>
-            <p class="step-context">Step 8 of 9</p>
+            <p class="step-context">Step 8 of 10</p>
             <p>Claude can already read and write inside your Obsidian vault. Now we're going to give it access to the other tools you use every day — your email, calendar, files, the systems your business already runs on.</p>
 
             <h4 class="substep">8a. Built-in connectors (~3 min)</h4>
@@ -459,7 +460,7 @@
               <h3>Set up your Key Vault</h3>
               <span class="step-time">~8 min</span>
             </div>
-            <p class="step-context">Step 9 of 9</p>
+            <p class="step-context">Step 9 of 10</p>
             <p>As you go through the program, Claude is going to need access to other tools — Stripe to read your payments, Replicate to generate images, MailerLite to send emails, and dozens of other services depending on what you build.</p>
             <p>Each of those tools gives you something called an <strong>API key</strong> — a long string of characters that proves it's you. You don't want those keys scattered across config files on your computer where you'll lose them.</p>
             <p><strong>Think of this like 1Password, but for Claude.</strong> One vault, all your devices, never lose a key again.</p>
@@ -500,6 +501,56 @@
           </div>
         </div>
 
+        <div class="step" id="step-10">
+          <div class="step-number" aria-hidden="true">10</div>
+          <div class="step-content">
+            <div class="step-header">
+              <h3>Connect to Strategic Profits</h3>
+              <span class="step-time">~3 min</span>
+            </div>
+            <p class="step-context">Step 10 of 10</p>
+            <p>This connects Claude to the Strategic Profits platform so it can access your program materials, shared resources, and community tools.</p>
+            <p><strong>You'll need:</strong> your SP API key (starts with <code>sk_sp_</code>, emailed to you when you enrolled).</p>
+
+            <div class="callout callout-tip" id="api-key-lookup-10">
+              <strong>Can't find your API key?</strong> Enter your email below and we'll resend it.
+              <form class="key-lookup-form" onsubmit="return lookupKey10(event)">
+                <div class="key-lookup-row">
+                  <input type="email" id="key-lookup-email-10" placeholder="you@example.com" required aria-label="Email address">
+                  <button type="submit" class="key-lookup-btn">Resend my key</button>
+                </div>
+                <div id="key-lookup-result-10" class="key-lookup-result" aria-live="polite"></div>
+              </form>
+            </div>
+
+            <p>Choose the method that matches how you're using Claude:</p>
+
+            <div class="connect-toggle" role="radiogroup" aria-label="Connection method">
+              <button class="connect-toggle-btn active" onclick="showConnectPath('cli')" role="radio" aria-checked="true">Claude Code (CLI)</button>
+              <button class="connect-toggle-btn" onclick="showConnectPath('desktop')" role="radio" aria-checked="false">Claude Desktop App</button>
+            </div>
+
+            <div class="connect-path" id="connect-cli">
+              <h4 class="substep">Via Claude Code (CLI)</h4>
+              <p><em>Connection instructions coming soon.</em> Ben will add the specific CLI commands and verification steps here.</p>
+            </div>
+
+            <div class="connect-path" id="connect-desktop" style="display:none;">
+              <h4 class="substep">Via Claude Desktop App</h4>
+              <p><em>Connection instructions coming soon.</em> Ben will add the specific Desktop App steps and verification here.</p>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card result-success">
+                <div class="result-icon" aria-hidden="true">&#10003;</div>
+                <div>
+                  <strong>You're connected when:</strong> Claude can access your Strategic Profits program materials. Try asking Claude about your program to verify.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -514,6 +565,7 @@
             <li>Auto mode enabled — Claude works without interrupting you</li>
             <li>Your tools connected — Gmail, Drive, GitHub, Slack, Strategic Profits, GHL</li>
             <li>Doppler vault connected — every API key has a home</li>
+            <li>Connected to Strategic Profits — program materials accessible</li>
           </ul>
           <p>This is the foundation. Everything Strategic Profits teaches you from here builds on this.</p>
 
@@ -744,6 +796,51 @@
       }).then(function(data) {
         result.className = 'key-lookup-result key-lookup-success';
         result.textContent = 'Check your email — if that address is registered, your API key is on the way.';
+      }).catch(function() {
+        result.className = 'key-lookup-result key-lookup-error';
+        result.textContent = 'Something went wrong. Try again, or email mail@strategicprofits.com for help.';
+      }).finally(function() {
+        btn.disabled = false;
+        btn.textContent = 'Resend my key';
+      });
+      return false;
+    }
+
+    function showConnectPath(path) {
+      var cli = document.getElementById('connect-cli');
+      var desktop = document.getElementById('connect-desktop');
+      var btns = document.querySelectorAll('.connect-toggle-btn');
+      if (path === 'cli') {
+        cli.style.display = '';
+        desktop.style.display = 'none';
+      } else {
+        cli.style.display = 'none';
+        desktop.style.display = '';
+      }
+      for (var i = 0; i < btns.length; i++) {
+        var active = (path === 'cli' && i === 0) || (path === 'desktop' && i === 1);
+        btns[i].classList.toggle('active', active);
+        btns[i].setAttribute('aria-checked', active);
+      }
+    }
+
+    function lookupKey10(e) {
+      e.preventDefault();
+      var email = document.getElementById('key-lookup-email-10').value.trim();
+      var result = document.getElementById('key-lookup-result-10');
+      var btn = e.target.querySelector('.key-lookup-btn');
+      if (!email) return false;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      result.className = 'key-lookup-result';
+      result.textContent = '';
+      fetch('https://services.leadconnectorhq.com/hooks/qG6ayaBjKO2G1iyLby2G/webhook-trigger/6939c302-ab4f-4e63-85b5-b93f43a46834', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email })
+      }).then(function() {
+        result.className = 'key-lookup-result key-lookup-success';
+        result.textContent = 'Check your email for your API key.';
       }).catch(function() {
         result.className = 'key-lookup-result key-lookup-error';
         result.textContent = 'Something went wrong. Try again, or email mail@strategicprofits.com for help.';
