@@ -15,7 +15,7 @@
     <div class="nav-inner">
       <a href="/" class="nav-brand">Strategic Profits</a>
       <div class="nav-links">
-        <a href="/" class="program-badge" id="program-badge" title="Change program"></a>
+        <a href="/" class="program-badge" id="program-badge" title="Change program" onclick="document.cookie='sp-program=;path=/;max-age=0'"></a>
         <a href="/setup/">Setup</a>
       </div>
     </div>
@@ -187,7 +187,7 @@
       var badge = document.getElementById('program-badge');
       if (m && badge) {
         badge.textContent = decodeURIComponent(m[1]);
-        badge.style.display = '';
+        badge.style.display = 'inline-block';
       }
     })();
   </script>
