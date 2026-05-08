@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get Started — Performance Golf</title>
-  <meta name="description" content="Three steps to get started with Performance Golf AI: book your call, complete your AI mapping, and start your grounding package.">
+  <meta name="description" content="Four steps to get started with Performance Golf AI: book your call, set up Claude, complete your AI mapping, and start your grounding package.">
   <link rel="stylesheet" href="/style.css?v=20260508f">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛳</text></svg>">
 </head>
@@ -24,7 +24,7 @@
       <div class="container">
         <div class="hero-badge">Get Started</div>
         <h1>Performance Golf AI Onboarding</h1>
-        <p class="hero-sub">Three steps to get up and running. Start at the top and work your way down.</p>
+        <p class="hero-sub">Four steps to get up and running. Start at the top and work your way down.</p>
       </div>
     </section>
 
@@ -72,13 +72,27 @@
             </div>
             <p class="step-context">Step 2 of 4</p>
 
-            <p>You'll need Claude Code installed and connected to the SP Shared MCP server. If you've already done this, skip to Step 3.</p>
+            <div class="callout callout-info">
+              <strong>Already have Claude Code working?</strong> Skip to Step 3.
+            </div>
 
-            <h4>Install Claude Code</h4>
-            <p>If you don't have Claude Code yet, install it from <a href="https://claude.ai/download" target="_blank" rel="noopener">claude.ai/download</a> (Desktop app) or run <code>npm install -g @anthropic-ai/claude-code</code> in your terminal (CLI).</p>
+            <p>You'll need Claude Code installed and connected to the SP Shared MCP server. Pick whichever method you prefer.</p>
+
+            <h4>Option A: Desktop App</h4>
+            <p>Download and install the Claude desktop app from <a href="https://claude.ai/download" target="_blank" rel="noopener">claude.ai/download</a>. Open it and sign in with your Anthropic account.</p>
+
+            <h4>Option B: CLI (Terminal)</h4>
+            <p>If you prefer working in a terminal, install Claude Code via npm:</p>
+            <div class="code-block">
+              <code>npm install -g @anthropic-ai/claude-code</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>Then run <code>claude</code> in your terminal and follow the sign-in prompts.</p>
 
             <h4>Connect SP Shared MCP</h4>
-            <p>Open Claude Code and paste this command, replacing <code>YOUR_SP_API_KEY_HERE</code> with your API key:</p>
+            <p>Once Claude Code is running, paste this command, replacing <code>YOUR_SP_API_KEY_HERE</code> with your API key:</p>
             <div class="code-block code-block--run">
               <span class="code-block-label">RUN THIS COMMAND</span>
               <code>Add this MCP server to my project config: name "sp-shared", URL "https://mcp.strategicprofits.com/mcp", with header "Authorization: Bearer YOUR_SP_API_KEY_HERE". Then run sp_sync in full mode to download shared skills.</code>
@@ -152,10 +166,10 @@
 
             <h4>Part A: Client Profile</h4>
             <p>Claude will have a conversation with you &mdash; not a form, an actual back-and-forth interview. It covers your business, responsibilities, tools, pain points, goals, and how you prefer to work with AI.</p>
-            <p>Open a Claude Code terminal panel and type:</p>
+            <p>Open Claude Code and type:</p>
             <div class="code-block code-block--run">
               <span class="code-block-label">RUN THIS COMMAND</span>
-              <code>Run the client profile interview. Use the client-profile-interview skill. Save my profile to 00 System/CLIENT-PROFILE.md and save progress as we go.</code>
+              <code>Run the client profile interview. Use the client-profile-interview skill. Save my profile to CLIENT-PROFILE.md and save progress as we go.</code>
               <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
               </button>
@@ -167,7 +181,7 @@
             <p>If the dossier wasn't generated automatically, run:</p>
             <div class="code-block code-block--run">
               <span class="code-block-label">RUN THIS COMMAND</span>
-              <code>Generate my client dossier. Create it at 00 System/CLIENT-DOSSIER.md with a summary of my profile, vault structure, documents, and setup status. Then show it to me for review before sending.</code>
+              <code>Generate my client dossier. Create it at CLIENT-DOSSIER.md with a summary of my profile, documents, and setup status. Then show it to me for review before sending.</code>
               <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
               </button>
