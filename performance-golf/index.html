@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get Started — Performance Golf</title>
-  <meta name="description" content="Four steps to get started with Performance Golf AI: book your call, set up Claude, complete your AI mapping, and start your grounding package.">
+  <meta name="description" content="Five steps to get started with Performance Golf AI: book your call, set up Claude, complete your AI mapping, run your client profile, and submit your dossier.">
   <link rel="stylesheet" href="/style.css?v=20260508f">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛳</text></svg>">
 </head>
@@ -24,7 +24,7 @@
       <div class="container">
         <div class="hero-badge">Get Started</div>
         <h1>Performance Golf AI Onboarding</h1>
-        <p class="hero-sub">Four steps to get up and running. Start at the top and work your way down.</p>
+        <p class="hero-sub">Five steps to get up and running. Start at the top and work your way down.</p>
       </div>
     </section>
 
@@ -35,7 +35,8 @@
             <a href="#pg-step-1" class="steps-nav-item" data-step="1"><span class="steps-nav-num">1</span> Book Your Call</a>
             <a href="#pg-step-2" class="steps-nav-item" data-step="2"><span class="steps-nav-num">2</span> Set Up Claude</a>
             <a href="#pg-step-3" class="steps-nav-item" data-step="3"><span class="steps-nav-num">3</span> AI Mapping</a>
-            <a href="#pg-step-4" class="steps-nav-item" data-step="4"><span class="steps-nav-num">4</span> Grounding Package</a>
+            <a href="#pg-step-4" class="steps-nav-item" data-step="4"><span class="steps-nav-num">4</span> Client Profile</a>
+            <a href="#pg-step-5" class="steps-nav-item" data-step="5"><span class="steps-nav-num">5</span> Dossier</a>
           </nav>
         </aside>
 
@@ -46,7 +47,7 @@
               <h3>Book Your Call with Ben</h3>
               <span class="step-time">~5 min</span>
             </div>
-            <p class="step-context">Step 1 of 4</p>
+            <p class="step-context">Step 1 of 5</p>
 
             <p>Your first step is a one-on-one call with Ben to map out your AI strategy and make sure you're set up for success.</p>
 
@@ -70,7 +71,7 @@
               <h3>Set Up Claude</h3>
               <span class="step-time">~10 min</span>
             </div>
-            <p class="step-context">Step 2 of 4</p>
+            <p class="step-context">Step 2 of 5</p>
 
             <div class="callout callout-info">
               <strong>Already have Claude Code working?</strong> Skip to Step 3.
@@ -119,14 +120,14 @@
               <h3>Complete Your AI Mapping</h3>
               <span class="step-time">~20&ndash;30 min</span>
             </div>
-            <p class="step-context">Step 3 of 4</p>
+            <p class="step-context">Step 3 of 5</p>
 
             <p>Before your call with Ben, complete the AI opportunity interview. This maps out your business, workflows, pain points, and where AI can make the biggest impact for you.</p>
 
             <p>Open Claude Code and run:</p>
             <div class="code-block code-block--run">
               <span class="code-block-label">RUN THIS COMMAND</span>
-              <code>Run the AI opportunity interview. Use the ai-opportunity-interview skill.</code>
+              <code>Run the AI opportunity interview. Use the ai-opportunity-interview skill. When the interview is complete, submit the results using the sp_submit_ai_opportunity tool.</code>
               <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
               </button>
@@ -134,19 +135,13 @@
 
             <p>Claude will have a 20&ndash;30 minute conversation with you &mdash; not a form, an actual back-and-forth interview. Answer honestly and specifically. There are no wrong answers. If you need to step away, progress is saved automatically.</p>
 
-            <h4>When You're Done</h4>
-            <p>The interview produces two files:</p>
-            <ul>
-              <li><code>AI-OPPORTUNITY-PROFILE-[YourName]-[Date].md</code> &mdash; your full AI opportunity profile</li>
-              <li><code>COMMAND-CENTER-BRIEF-[YourName]-[Date].md</code> &mdash; your dashboard needs</li>
-            </ul>
-            <p><strong>Forward both files to your supervisor</strong> (email, Slack, or however your team normally shares files). Do this right away so it doesn't slip.</p>
+            <p>When the interview is complete, Claude will automatically submit your results to the team.</p>
 
             <div class="result-grid">
               <div class="result-card result-success">
                 <div class="result-icon" aria-hidden="true">&#10003;</div>
                 <div>
-                  <strong>You're done when:</strong> Both .md files are saved and forwarded to your supervisor.
+                  <strong>You're done when:</strong> Claude confirms your AI Opportunity Profile and Command Center Brief were submitted.
                 </div>
               </div>
             </div>
@@ -157,28 +152,49 @@
           <div class="step-number" aria-hidden="true">4</div>
           <div class="step-content">
             <div class="step-header">
-              <h3>Start Your Grounding Package</h3>
-              <span class="step-time">~45 min</span>
+              <h3>Client Profile</h3>
+              <span class="step-time">~20&ndash;30 min</span>
             </div>
-            <p class="step-context">Step 4 of 4</p>
+            <p class="step-context">Step 4 of 5</p>
 
-            <p>The grounding package is where Claude gets to know you and your business. It has two parts: a profile interview and a dossier review.</p>
+            <p>Now Claude gets to know you personally. This is a deeper interview covering your business, responsibilities, tools, pain points, goals, and how you prefer to work with AI.</p>
 
-            <h4>Part A: Client Profile</h4>
-            <p>Claude will have a conversation with you &mdash; not a form, an actual back-and-forth interview. It covers your business, responsibilities, tools, pain points, goals, and how you prefer to work with AI.</p>
-            <p>Open Claude Code and type:</p>
+            <p>Open Claude Code and run:</p>
             <div class="code-block code-block--run">
               <span class="code-block-label">RUN THIS COMMAND</span>
-              <code>Run the client profile interview. Use the client-profile-interview skill. Save my profile to CLIENT-PROFILE.md and save progress as we go.</code>
+              <code>Run the client profile interview. Use the client-profile-interview skill. Save my profile to CLIENT-PROFILE.md and save progress as we go. When complete, submit it using sp_submit_onboarding with program "pg".</code>
               <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
               </button>
             </div>
+
             <p>Take your time. Be specific and honest &mdash; Claude uses your answers to build your entire AI configuration. If you need to step away, progress is saved automatically.</p>
 
-            <h4>Part B: Your Dossier</h4>
-            <p>After the profile interview, Claude creates a dossier &mdash; a summary of your setup, your business context, and what was accomplished. This gets sent to the team so they know exactly who you are before the program starts.</p>
-            <p>If the dossier wasn't generated automatically, run:</p>
+            <p>When the interview is complete, Claude will save your profile locally and submit it to the team.</p>
+
+            <div class="result-grid">
+              <div class="result-card result-success">
+                <div class="result-icon" aria-hidden="true">&#10003;</div>
+                <div>
+                  <strong>You're done when:</strong> Claude confirms your client profile was submitted.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step" id="pg-step-5">
+          <div class="step-number" aria-hidden="true">5</div>
+          <div class="step-content">
+            <div class="step-header">
+              <h3>Your Dossier</h3>
+              <span class="step-time">~10 min</span>
+            </div>
+            <p class="step-context">Step 5 of 5</p>
+
+            <p>Claude creates a dossier &mdash; a summary of your setup, your business context, and what was accomplished. This gets sent to the team so they know exactly who you are before the program starts.</p>
+
+            <p>If the dossier wasn't generated automatically after your client profile, run:</p>
             <div class="code-block code-block--run">
               <span class="code-block-label">RUN THIS COMMAND</span>
               <code>Generate my client dossier. Create it at CLIENT-DOSSIER.md with a summary of my profile, documents, and setup status. Then show it to me for review before sending.</code>
@@ -189,7 +205,7 @@
             <p>Review the dossier. When you're satisfied:</p>
             <div class="code-block code-block--run">
               <span class="code-block-label">APPROVE &amp; SEND</span>
-              <code>The dossier looks good. Send it to the Strategic Profits team.</code>
+              <code>The dossier looks good. Submit it using sp_submit_onboarding with file type "dossier" and program "pg".</code>
               <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
               </button>
@@ -199,7 +215,7 @@
               <div class="result-card result-success">
                 <div class="result-icon" aria-hidden="true">&#10003;</div>
                 <div>
-                  <strong>You're done when:</strong> Claude confirms the dossier was sent. The team will review it before your program starts.
+                  <strong>You're done when:</strong> Claude confirms the dossier was submitted. The team will review it before your program starts.
                 </div>
               </div>
             </div>
