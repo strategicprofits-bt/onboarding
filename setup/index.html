@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Setup — Strategic Profits</title>
   <meta name="description" content="Set up the workspace where Claude works alongside you. Watch the video or follow step-by-step.">
-  <link rel="stylesheet" href="/style.css?v=20260508e">
+  <link rel="stylesheet" href="/style.css?v=20260508f">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 </head>
 <body>
@@ -17,6 +17,7 @@
       <div class="nav-links">
         <a href="/" class="program-badge" id="program-badge" title="Change program" onclick="document.cookie='sp-program=;path=/;max-age=0'"></a>
         <a href="/mental-model/">Mental Model</a>
+        <a href="/next-steps/">Next Steps</a>
         <a href="#troubleshooting">Troubleshooting</a>
       </div>
     </div>
@@ -102,9 +103,9 @@
             <a href="#step-5" class="steps-nav-item" data-step="5"><span class="steps-nav-num">5</span> Connect Claude to vault</a>
             <a href="#step-6" class="steps-nav-item" data-step="6"><span class="steps-nav-num">6</span> Test the connection</a>
             <a href="#step-7" class="steps-nav-item" data-step="7"><span class="steps-nav-num">7</span> Turn on auto mode</a>
-            <a href="#step-8" class="steps-nav-item" data-step="8"><span class="steps-nav-num">8</span> Connect your tools</a>
-            <a href="#step-9" class="steps-nav-item" data-step="9"><span class="steps-nav-num">9</span> Set up Key Vault</a>
-            <a href="#step-10" class="steps-nav-item" data-step="10"><span class="steps-nav-num">10</span> Connect to SP MCP</a>
+            <a href="#step-8" class="steps-nav-item" data-step="8"><span class="steps-nav-num">8</span> Connect to SP MCP</a>
+            <a href="#step-9" class="steps-nav-item" data-step="9"><span class="steps-nav-num">9</span> Connect your tools</a>
+            <a href="#step-10" class="steps-nav-item" data-step="10"><span class="steps-nav-num">10</span> Set up Key Vault</a>
           </nav>
           <div class="os-toggle" role="radiogroup" aria-label="Operating system">
             <button class="os-btn active" data-os="mac" role="radio" aria-checked="true">Mac</button>
@@ -233,7 +234,7 @@
             </div>
             <ol start="2">
               <li>Click <strong>Create</strong></li>
-              <li>Obsidian opens to your new (empty) vault. If a <code>Welcome.md</code> file shows up in the sidebar, right-click it and delete it. We don't need it.</li>
+              <li>Obsidian opens to your new (empty) vault</li>
             </ol>
             <div class="callout callout-tip">
               <strong>Tip:</strong> Want to rename your vault later? Click the vault icon in the bottom-left &rarr; Manage vaults &rarr; click the three dots next to your vault &rarr; Rename. One vault is plenty.
@@ -367,148 +368,10 @@
           <div class="step-number" aria-hidden="true">8</div>
           <div class="step-content">
             <div class="step-header">
-              <h3>Connect your tools</h3>
-              <span class="step-time">~5 min</span>
-            </div>
-            <p class="step-context">Step 8 of 10</p>
-            <p>Claude can already read and write inside your Obsidian vault. Now we're going to give it access to the other tools you use every day — your email, calendar, files, the systems your business already runs on.</p>
-
-            <h4 class="substep">8a. Built-in connectors (~3 min)</h4>
-            <p>Claude Desktop has built-in connectors for the tools most owners use. These are one-click — no API keys, no copy-paste. You sign in with your existing account and Claude can use that tool from then on.</p>
-            <p><strong>Connect at minimum:</strong></p>
-            <ul>
-              <li><strong>Gmail</strong> — so Claude can read and draft emails</li>
-              <li><strong>Google Drive</strong> — so Claude can read documents you already have</li>
-              <li><strong>GitHub</strong> — so Claude can manage code and shared content from Strategic Profits</li>
-              <li><strong>Slack</strong> — so Claude can read messages and post on your behalf</li>
-            </ul>
-            <p><strong>Optional but useful:</strong> Google Calendar, Notion, Asana, Linear — connect any others you actually use.</p>
-            <ol>
-              <li>In Claude Desktop, click the <strong>Settings</strong> gear (top-right corner)</li>
-              <li>Click the <strong>Connectors</strong> tab</li>
-              <li>For each tool, click <strong>Connect</strong> &rarr; sign in &rarr; click <strong>Allow</strong></li>
-              <li>Repeat for each tool</li>
-            </ol>
-            <div class="callout callout-info">
-              <strong>What Claude can see vs. what stays private:</strong> When you connect Gmail, Claude can read and send emails when you ask it to. It does NOT read your inbox in the background. Same for every other connector — Claude only acts when you tell it to.
-            </div>
-
-            <div class="result-grid">
-              <div class="result-card result-success">
-                <div class="result-icon" aria-hidden="true">&#10003;</div>
-                <div>
-                  <strong>Each connector works when:</strong> in the Chat tab, type <em>"What can you see in my [tool]?"</em> and Claude responds with a real summary.
-                </div>
-              </div>
-            </div>
-
-            <h4 class="substep">8b. Strategic Profits connectors (~2 min)</h4>
-            <p>Two connectors are specific to Strategic Profits. We'll set them up using a built-in skill that handles all the details.</p>
-            <p><strong>You'll need:</strong> your SP API key (starts with <code>sk_sp_</code>, emailed to you when you enrolled).</p>
-
-            <div class="callout callout-tip" id="api-key-lookup">
-              <strong>Can't find your API key?</strong> Enter your email below and we'll resend it.
-              <form id="key-lookup-form" class="key-lookup-form" onsubmit="return lookupKey(event)">
-                <div class="key-lookup-row">
-                  <input type="email" id="key-lookup-email" placeholder="you@example.com" required aria-label="Email address">
-                  <button type="submit" class="key-lookup-btn">Resend my key</button>
-                </div>
-                <div id="key-lookup-result" class="key-lookup-result" aria-live="polite"></div>
-              </form>
-            </div>
-
-            <p><strong>SP Shared:</strong> Run this after completing <a href="#step-10">Step 10</a>. In Claude Desktop, Code tab, type:</p>
-            <div class="code-block">
-              <code>/sp-connect sp-mcp</code>
-              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-            </div>
-            <p>The skill will ask for your SP API key, run the connection, and verify it worked. Restart Claude Code when it finishes.</p>
-
-            <details class="faq-item">
-              <summary>Don't have the /sp-connect skill yet?</summary>
-              <div class="faq-body">
-                <p>Download it here and extract it into your vault's <code>Shared/shared-claude-skills/skills/</code> folder:</p>
-                <a href="/sp-connect.zip" download class="download-link">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                  sp-connect.zip
-                </a>
-                <p>Then restart Claude Code and run <code>/sp-connect sp-mcp</code> as shown above.</p>
-              </div>
-            </details>
-
-            <p><strong>GoHighLevel</strong> (only if your business uses GHL — skip if you don't):</p>
-            <div class="code-block">
-              <code>/sp-connect ghl</code>
-              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-            </div>
-            <p>The skill will ask for your Private Integration Token and Location ID, then handle everything.</p>
-
-            <div class="callout callout-info">
-              <strong>About <code>/sp-connect</code>:</strong> This is a Strategic Profits skill that handles all connection setup. Run <code>/sp-connect status</code> any time to see what's connected, or <code>/sp-connect repair</code> to fix broken connections.
-            </div>
-          </div>
-        </div>
-
-        <div class="step" id="step-9">
-          <div class="step-number" aria-hidden="true">9</div>
-          <div class="step-content">
-            <div class="step-header">
-              <h3>Set up your Key Vault</h3>
-              <span class="step-time">~8 min</span>
-            </div>
-            <p class="step-context">Step 9 of 10</p>
-            <p>As you go through the program, Claude is going to need access to other tools — Stripe to read your payments, Replicate to generate images, MailerLite to send emails, and dozens of other services depending on what you build.</p>
-            <p>Each of those tools gives you something called an <strong>API key</strong> — a long string of characters that proves it's you. You don't want those keys scattered across config files on your computer where you'll lose them.</p>
-            <p><strong>Think of this like 1Password, but for Claude.</strong> One vault, all your devices, never lose a key again.</p>
-
-            <p>We use a tool called <strong>Doppler</strong> for this. It's free for personal use, takes a few minutes to set up, and means:</p>
-            <ul>
-              <li>All your API keys live in one place</li>
-              <li>Your keys sync to every device you use Claude on</li>
-              <li>When Claude says "I can't find your X key," there's exactly one place to look</li>
-              <li>When you change a key, every device picks up the new value automatically</li>
-            </ul>
-
-            <p>In Claude Desktop, Code tab, type:</p>
-            <div class="code-block">
-              <code>/sp-connect doppler</code>
-              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-            </div>
-            <p>The skill will walk you through everything: creating a Doppler account, installing the CLI, logging in, setting up your project, and verifying it works. Just answer its questions when it asks.</p>
-
-            <div class="callout callout-info">
-              <strong>Adding keys later:</strong> Any time a service gives you an API key, just tell Claude: <em>"Add my Stripe key to Doppler. Here it is: rk_live_..."</em> — Claude knows how to do the rest.
-            </div>
-
-            <div class="callout callout-tip">
-              <strong>Multiple devices?</strong> When you set up a second computer, just run <code>/sp-connect doppler</code> again — it'll detect your existing account and project, log you in, and all your keys are available immediately.
-            </div>
-
-            <div class="result-grid">
-              <div class="result-card result-success">
-                <div class="result-icon" aria-hidden="true">&#10003;</div>
-                <div>
-                  <strong>Doppler is connected when:</strong> the skill reports your project name and config. Run <code>/sp-connect status</code> any time to verify.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="step" id="step-10">
-          <div class="step-number" aria-hidden="true">10</div>
-          <div class="step-content">
-            <div class="step-header">
               <h3>Connect to SP MCP</h3>
               <span class="step-time">~5 min</span>
             </div>
-            <p class="step-context">Step 10 of 10</p>
+            <p class="step-context">Step 8 of 10</p>
             <p>This connects Claude to the Strategic Profits platform so it can access your program materials, shared resources, and community tools.</p>
             <p><strong>You'll need:</strong> your SP API key (starts with <code>sk_sp_</code>, emailed to you when you enrolled).</p>
 
@@ -614,6 +477,154 @@
           </div>
         </div>
 
+        <div class="step" id="step-9">
+          <div class="step-number" aria-hidden="true">9</div>
+          <div class="step-content">
+            <div class="step-header">
+              <h3>Connect your tools</h3>
+              <span class="step-time">~5 min</span>
+            </div>
+            <p class="step-context">Step 9 of 10</p>
+            <p>Claude can already read and write inside your Obsidian vault. Now we're going to give it access to the other tools you use every day — your email, calendar, files, the systems your business already runs on.</p>
+
+            <h4 class="substep">9a. Built-in connectors (~3 min)</h4>
+            <p>Claude Desktop has built-in connectors for the tools most owners use. These are one-click — no API keys, no copy-paste. You sign in with your existing account and Claude can use that tool from then on.</p>
+            <p><strong>Connect at minimum:</strong></p>
+            <ul>
+              <li><strong>Gmail</strong> — so Claude can read and draft emails</li>
+              <li><strong>Google Drive</strong> — so Claude can read documents you already have</li>
+              <li><strong>GitHub</strong> — so Claude can manage code and shared content from Strategic Profits</li>
+              <li><strong>Slack</strong> — so Claude can read messages and post on your behalf</li>
+            </ul>
+            <p><strong>Optional but useful:</strong> Google Calendar, Notion, Asana, Linear — connect any others you actually use.</p>
+            <ol>
+              <li>In Claude Desktop, click the <strong>Settings</strong> gear (top-right corner)</li>
+              <li>Click the <strong>Connectors</strong> tab</li>
+              <li>For each tool, click <strong>Connect</strong> &rarr; sign in &rarr; click <strong>Allow</strong></li>
+              <li>Repeat for each tool</li>
+            </ol>
+            <div class="callout callout-info">
+              <strong>What Claude can see vs. what stays private:</strong> When you connect Gmail, Claude can read and send emails when you ask it to. It does NOT read your inbox in the background. Same for every other connector — Claude only acts when you tell it to.
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card result-success">
+                <div class="result-icon" aria-hidden="true">&#10003;</div>
+                <div>
+                  <strong>Each connector works when:</strong> in the Chat tab, type <em>"What can you see in my [tool]?"</em> and Claude responds with a real summary.
+                </div>
+              </div>
+            </div>
+
+            <h4 class="substep">9b. Strategic Profits connectors (~2 min)</h4>
+            <p>Two connectors are specific to Strategic Profits. We'll set them up using a built-in skill that handles all the details.</p>
+            <p><strong>You'll need:</strong> your SP API key (starts with <code>sk_sp_</code>, emailed to you when you enrolled).</p>
+
+            <div class="callout callout-tip" id="api-key-lookup">
+              <strong>Can't find your API key?</strong> Enter your email below and we'll resend it.
+              <form id="key-lookup-form" class="key-lookup-form" onsubmit="return lookupKey(event)">
+                <div class="key-lookup-row">
+                  <input type="email" id="key-lookup-email" placeholder="you@example.com" required aria-label="Email address">
+                  <button type="submit" class="key-lookup-btn">Resend my key</button>
+                </div>
+                <div id="key-lookup-result" class="key-lookup-result" aria-live="polite"></div>
+              </form>
+            </div>
+
+            <p><strong>SP Shared:</strong> In Claude Desktop, Code tab, type:</p>
+            <div class="code-block">
+              <code>/sp-connect sp-mcp</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>The skill will ask for your SP API key, run the connection, and verify it worked. Restart Claude Code when it finishes.</p>
+
+            <details class="faq-item">
+              <summary>Don't have the /sp-connect skill yet?</summary>
+              <div class="faq-body">
+                <p>Download it here and extract it into your vault's <code>Shared/shared-claude-skills/skills/</code> folder:</p>
+                <a href="/sp-connect.zip" download class="download-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  sp-connect.zip
+                </a>
+                <p>Then restart Claude Code and run <code>/sp-connect sp-mcp</code> as shown above.</p>
+              </div>
+            </details>
+
+            <p><strong>GoHighLevel</strong> (only if your business uses GHL — skip if you don't):</p>
+            <div class="code-block">
+              <code>/sp-connect ghl</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>The skill will ask for your Private Integration Token and Location ID, then handle everything.</p>
+
+            <div class="callout callout-info">
+              <strong>About <code>/sp-connect</code>:</strong> This is a Strategic Profits skill that handles all connection setup. Run <code>/sp-connect status</code> any time to see what's connected, or <code>/sp-connect repair</code> to fix broken connections.
+            </div>
+          </div>
+        </div>
+
+        <div class="step" id="step-10">
+          <div class="step-number" aria-hidden="true">10</div>
+          <div class="step-content">
+            <div class="step-header">
+              <h3>Set up your Key Vault</h3>
+              <span class="step-time">~8 min</span>
+            </div>
+            <p class="step-context">Step 10 of 10</p>
+            <p>As you go through the program, Claude is going to need access to other tools — Stripe to read your payments, Replicate to generate images, MailerLite to send emails, and dozens of other services depending on what you build.</p>
+            <p>Each of those tools gives you something called an <strong>API key</strong> — a long string of characters that proves it's you. You don't want those keys scattered across config files on your computer where you'll lose them.</p>
+            <p><strong>Think of this like 1Password, but for Claude.</strong> One vault, all your devices, never lose a key again.</p>
+
+            <p>We use a tool called <strong>Doppler</strong> for this. It's free for personal use, takes a few minutes to set up, and means:</p>
+            <ul>
+              <li>All your API keys live in one place</li>
+              <li>Your keys sync to every device you use Claude on</li>
+              <li>When Claude says "I can't find your X key," there's exactly one place to look</li>
+              <li>When you change a key, every device picks up the new value automatically</li>
+            </ul>
+
+            <p>In Claude Desktop, Code tab, type:</p>
+            <div class="code-block">
+              <code>/sp-connect doppler</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>The skill will walk you through everything: creating a Doppler account, installing the CLI, logging in, setting up your project, and verifying it works. Just answer its questions when it asks.</p>
+
+            <h4 class="substep">Verify Doppler is working</h4>
+            <p>After the skill finishes, run this in the Code tab to confirm your secrets are accessible:</p>
+            <div class="code-block">
+              <code>doppler secrets --only-names</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>You should see a list of secret names (like <code>SP_API_KEY</code>). If you see an error, re-run <code>/sp-connect doppler</code> and follow the prompts.</p>
+
+            <div class="callout callout-info">
+              <strong>Adding keys later:</strong> Any time a service gives you an API key, just tell Claude: <em>"Add my Stripe key to Doppler. Here it is: rk_live_..."</em> — Claude knows how to do the rest.
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>Multiple devices?</strong> When you set up a second computer, just run <code>/sp-connect doppler</code> again — it'll detect your existing account and project, log you in, and all your keys are available immediately.
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card result-success">
+                <div class="result-icon" aria-hidden="true">&#10003;</div>
+                <div>
+                  <strong>Doppler is connected when:</strong> <code>doppler secrets --only-names</code> shows your secret names without errors. Run <code>/sp-connect status</code> any time to verify all connections.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -626,9 +637,9 @@
             <li>Claude Desktop installed and signed in</li>
             <li>Obsidian vault created and connected to Claude</li>
             <li>Auto mode enabled — Claude works without interrupting you</li>
+            <li>Connected to Strategic Profits — program materials accessible</li>
             <li>Your tools connected — Gmail, Drive, GitHub, Slack, Strategic Profits, GHL</li>
             <li>Doppler vault connected — every API key has a home</li>
-            <li>Connected to Strategic Profits — program materials accessible</li>
           </ul>
           <p>This is the foundation. Everything Strategic Profits teaches you from here builds on this.</p>
 
@@ -810,7 +821,11 @@
     }
     window.addEventListener('scroll', onScroll, { passive: true });
 
+    var stepperActive = false;
+    var currentStep = 1;
+
     function updateStepNav() {
+      if (stepperActive) return;
       var steps = document.querySelectorAll('.step');
       var items = document.querySelectorAll('.steps-nav-item');
       var current = 0;
@@ -821,6 +836,61 @@
         items[j].classList.toggle('active', j === current);
         items[j].classList.toggle('done', j < current);
       }
+    }
+
+    function goToStep(n) {
+      var steps = document.querySelectorAll('#path-steps .step');
+      var items = document.querySelectorAll('.steps-nav-item');
+      if (n < 1 || n > steps.length) return;
+      currentStep = n;
+      for (var i = 0; i < steps.length; i++) {
+        steps[i].classList.toggle('step-active', i === n - 1);
+      }
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.toggle('active', j === n - 1);
+        items[j].classList.toggle('done', j < n - 1);
+      }
+      var target = document.getElementById('path-steps');
+      if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+    }
+
+    function initStepper() {
+      var container = document.getElementById('path-steps');
+      if (!container) return;
+      container.classList.add('stepper-mode');
+      stepperActive = true;
+      var steps = container.querySelectorAll('.step');
+      for (var i = 0; i < steps.length; i++) {
+        var btns = document.createElement('div');
+        btns.className = 'step-nav-buttons';
+        if (i > 0) {
+          var prev = document.createElement('button');
+          prev.className = 'step-nav-btn step-nav-btn--prev';
+          prev.textContent = '← Previous';
+          prev.setAttribute('data-step', String(i));
+          btns.appendChild(prev);
+        }
+        if (i < steps.length - 1) {
+          var next = document.createElement('button');
+          next.className = 'step-nav-btn step-nav-btn--next';
+          next.textContent = 'Continue →';
+          next.setAttribute('data-step', String(i + 2));
+          btns.appendChild(next);
+        }
+        steps[i].querySelector('.step-content').appendChild(btns);
+      }
+      container.addEventListener('click', function(e) {
+        var btn = e.target.closest('.step-nav-btn');
+        if (btn) goToStep(parseInt(btn.getAttribute('data-step'), 10));
+      });
+      var navItems = document.querySelectorAll('.steps-nav-item');
+      for (var k = 0; k < navItems.length; k++) {
+        navItems[k].addEventListener('click', function(e) {
+          e.preventDefault();
+          goToStep(parseInt(this.getAttribute('data-step'), 10));
+        });
+      }
+      goToStep(1);
     }
 
     function setOS(os) {
@@ -925,7 +995,7 @@
       return false;
     }
 
-    updateStepNav();
+    initStepper();
 
     (function() {
       var m = document.cookie.match(/(?:^|;\s*)sp-program=([^;]+)/);

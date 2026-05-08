@@ -1606,6 +1606,52 @@ body[data-os="win"] .os-mac { display: none; }
   margin-bottom: 8px;
 }
 
+/* ========== Stepper (one step at a time) ========== */
+
+.stepper-mode .step {
+  display: none;
+}
+
+.stepper-mode .step.step-active {
+  display: flex;
+}
+
+.step-nav-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.step-nav-btn {
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.step-nav-btn:hover {
+  border-color: var(--color-accent);
+}
+
+.step-nav-btn--next {
+  background: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+}
+
+.step-nav-btn--next:hover {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
 /* ========== Responsive additions ========== */
 
 @media (max-width: 640px) {
