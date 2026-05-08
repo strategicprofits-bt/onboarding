@@ -12,7 +12,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Get Started — Strategic Profits">
   <meta name="twitter:description" content="Two paths: understand the mental model or jump straight into setup.">
-  <link rel="stylesheet" href="/style.css?v=20260507">
+  <link rel="stylesheet" href="/style.css?v=20260508">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 </head>
 <body>
@@ -29,29 +29,17 @@
       <div class="container">
         <div class="hero-badge">Get Started</div>
         <h1>Stop chatting with AI.<br>Start building with it.</h1>
-        <p class="hero-sub">Two paths to getting started. Pick whichever fits how you learn.</p>
+        <p class="hero-sub">Select your program to get started.</p>
       </div>
     </section>
 
     <section class="landing-choices">
       <div class="container">
-        <div class="choice-grid">
-          <a href="/mental-model/" class="choice-card">
-            <div class="choice-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-            </div>
-            <h2>Mental Model</h2>
-            <p>Three distinctions that change how you think about AI. Read this first if you want to understand <em>why</em> we use these specific tools before you install anything.</p>
-            <span class="choice-meta">~15 min read</span>
-          </a>
-          <a href="/setup/" class="choice-card">
-            <div class="choice-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            </div>
-            <h2>Setup</h2>
-            <p>Install Claude Desktop, Obsidian, and connect everything. Watch the full walkthrough video or follow the step-by-step guide — your choice.</p>
-            <span class="choice-meta">~25 min</span>
-          </a>
+        <div class="program-grid">
+          <button class="program-card" onclick="selectProgram('ZenithMind OS')">ZenithMind OS</button>
+          <button class="program-card" onclick="selectProgram('Force Multiplier')">Force Multiplier</button>
+          <button class="program-card" onclick="selectProgram('Connect the Dots')">Connect the Dots</button>
+          <button class="program-card" onclick="selectProgram('Maximum Profits')">Maximum Profits</button>
         </div>
       </div>
     </section>
@@ -67,6 +55,19 @@
     window.addEventListener('scroll', function() {
       document.getElementById('nav').classList.toggle('nav-scrolled', window.scrollY > 40);
     }, { passive: true });
+
+    function getProgram() {
+      var m = document.cookie.match(/(?:^|;\s*)sp-program=([^;]+)/);
+      return m ? decodeURIComponent(m[1]) : null;
+    }
+    function selectProgram(name) {
+      document.cookie = 'sp-program=' + encodeURIComponent(name) + ';path=/;max-age=31536000;SameSite=Lax';
+      window.location.href = '/mental-model/';
+    }
+    // Auto-redirect if program already selected
+    if (getProgram()) {
+      window.location.href = '/mental-model/';
+    }
   </script>
 </body>
 </html>

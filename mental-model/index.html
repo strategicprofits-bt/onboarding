@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mental Model — Strategic Profits</title>
   <meta name="description" content="Three distinctions that change how you think about AI. Coding CLIs vs chat, Obsidian vs cloud docs, building systems vs getting answers.">
-  <link rel="stylesheet" href="/style.css?v=20260507">
+  <link rel="stylesheet" href="/style.css?v=20260508">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 </head>
 <body>
@@ -15,6 +15,7 @@
     <div class="nav-inner">
       <a href="/" class="nav-brand">Strategic Profits</a>
       <div class="nav-links">
+        <a href="/" class="program-badge" id="program-badge" title="Change program"></a>
         <a href="/setup/">Setup</a>
       </div>
     </div>
@@ -42,6 +43,8 @@
             Your browser does not support the video element.
           </video>
         </div>
+
+        <p class="skip-ahead"><a href="/setup/">Skip ahead to Setup &rarr;</a></p>
 
         <p>Most people think they know what AI is.</p>
         <p>They've used ChatGPT. They've typed a question, gotten an answer, maybe felt a little impressed, maybe a little underwhelmed. And they've filed it under "useful sometimes" and moved on with their life.</p>
@@ -160,15 +163,8 @@
           </ul>
         </div>
 
-        <div class="page-nav">
-          <a href="/" class="nav-prev">
-            <span class="nav-prev-label">&larr; Back</span>
-            <span class="nav-prev-title">Home</span>
-          </a>
-          <a href="/setup/" class="nav-next">
-            <span class="nav-next-label">Next &rarr;</span>
-            <span class="nav-next-title">Setup</span>
-          </a>
+        <div class="next-cta">
+          <a href="/setup/" class="next-cta-btn">Next: Setup &rarr;</a>
         </div>
 
       </div>
@@ -185,6 +181,15 @@
     window.addEventListener('scroll', function() {
       document.getElementById('nav').classList.toggle('nav-scrolled', window.scrollY > 40);
     }, { passive: true });
+
+    (function() {
+      var m = document.cookie.match(/(?:^|;\s*)sp-program=([^;]+)/);
+      var badge = document.getElementById('program-badge');
+      if (m && badge) {
+        badge.textContent = decodeURIComponent(m[1]);
+        badge.style.display = '';
+      }
+    })();
   </script>
 </body>
 </html>

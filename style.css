@@ -1112,6 +1112,98 @@ body[data-os="win"] .os-mac { display: none; }
   margin-top: auto;
 }
 
+/* ========== Program Selector ========== */
+
+.program-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.program-card {
+  display: block;
+  padding: 24px 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-family: var(--font);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.program-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+/* ========== Program Badge (nav) ========== */
+
+.program-badge {
+  display: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-accent) !important;
+  background: rgba(212, 115, 58, 0.08);
+  padding: 3px 10px;
+  border-radius: 12px;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.program-badge:hover {
+  background: rgba(212, 115, 58, 0.15);
+  text-decoration: none !important;
+}
+
+/* ========== Skip Ahead Link ========== */
+
+.skip-ahead {
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+.skip-ahead a {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.skip-ahead a:hover {
+  color: var(--color-accent);
+}
+
+/* ========== Next CTA Button ========== */
+
+.next-cta {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border-light);
+  text-align: center;
+}
+
+.next-cta-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background: var(--color-accent);
+  color: #fff !important;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  text-decoration: none !important;
+  transition: background 0.2s;
+}
+
+.next-cta-btn:hover {
+  background: var(--color-accent-hover, #BF6532);
+  text-decoration: none !important;
+}
+
 /* ========== Welcome Video ========== */
 
 .welcome-video {
@@ -1373,6 +1465,11 @@ body[data-os="win"] .os-mac { display: none; }
 @media (max-width: 640px) {
   .choice-grid {
     grid-template-columns: 1fr;
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
   }
 
   .landing-hero {

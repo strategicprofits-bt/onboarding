@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Setup — Strategic Profits</title>
   <meta name="description" content="Set up the workspace where Claude works alongside you. Watch the video or follow step-by-step.">
-  <link rel="stylesheet" href="/style.css?v=20260507">
+  <link rel="stylesheet" href="/style.css?v=20260508">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 </head>
 <body>
@@ -15,6 +15,7 @@
     <div class="nav-inner">
       <a href="/" class="nav-brand">Strategic Profits</a>
       <div class="nav-links">
+        <a href="/" class="program-badge" id="program-badge" title="Change program"></a>
         <a href="/mental-model/">Mental Model</a>
         <a href="#troubleshooting">Troubleshooting</a>
       </div>
@@ -754,6 +755,15 @@
     }
 
     updateStepNav();
+
+    (function() {
+      var m = document.cookie.match(/(?:^|;\s*)sp-program=([^;]+)/);
+      var badge = document.getElementById('program-badge');
+      if (m && badge) {
+        badge.textContent = decodeURIComponent(m[1]);
+        badge.style.display = '';
+      }
+    })();
   </script>
 </body>
 </html>
