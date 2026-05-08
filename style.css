@@ -1204,6 +1204,44 @@ body[data-os="win"] .os-mac { display: none; }
   text-decoration: none !important;
 }
 
+/* ========== Connect Toggle (CLI / Desktop) ========== */
+
+.connect-toggle {
+  display: inline-flex;
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 3px;
+  margin: 16px 0 24px;
+}
+
+.connect-toggle-btn {
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.connect-toggle-btn:hover {
+  color: var(--color-text);
+}
+
+.connect-toggle-btn.active {
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+}
+
+.connect-path {
+  margin-bottom: 24px;
+}
+
 /* ========== Welcome Video ========== */
 
 .welcome-video {
