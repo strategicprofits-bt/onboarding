@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started — Performance Golf</title>
+  <meta name="description" content="Three steps to get started with Performance Golf AI: book your call, complete your AI mapping, and start your grounding package.">
+  <link rel="stylesheet" href="/style.css?v=20260508f">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛳</text></svg>">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/performance-golf/" class="nav-brand">Performance Golf</a>
+    </div>
+  </nav>
+
+  <div class="progress-bar" id="progress-bar" role="presentation"></div>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">Get Started</div>
+        <h1>Performance Golf AI Onboarding</h1>
+        <p class="hero-sub">Three steps to get up and running. Start at the top and work your way down.</p>
+      </div>
+    </section>
+
+    <section class="setup-path" id="pg-steps">
+      <div class="container">
+        <aside class="steps-nav" id="steps-nav" aria-label="Step outline">
+          <nav>
+            <a href="#pg-step-1" class="steps-nav-item" data-step="1"><span class="steps-nav-num">1</span> Book Your Call</a>
+            <a href="#pg-step-2" class="steps-nav-item" data-step="2"><span class="steps-nav-num">2</span> AI Mapping</a>
+            <a href="#pg-step-3" class="steps-nav-item" data-step="3"><span class="steps-nav-num">3</span> Grounding Package</a>
+          </nav>
+        </aside>
+
+        <div class="step" id="pg-step-1">
+          <div class="step-number" aria-hidden="true">1</div>
+          <div class="step-content">
+            <div class="step-header">
+              <h3>Book Your Call with Ben</h3>
+              <span class="step-time">~5 min</span>
+            </div>
+            <p class="step-context">Step 1 of 3</p>
+
+            <p>Your first step is a one-on-one call with Ben to map out your AI strategy and make sure you're set up for success.</p>
+
+            <p><a href="https://meetben.com/pg" target="_blank" rel="noopener" class="step-cta-link">Book your call at meetben.com/pg &rarr;</a></p>
+
+            <div class="result-grid">
+              <div class="result-card result-success">
+                <div class="result-icon" aria-hidden="true">&#10003;</div>
+                <div>
+                  <strong>You're done when:</strong> You have a confirmed call on the calendar.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step" id="pg-step-2">
+          <div class="step-number" aria-hidden="true">2</div>
+          <div class="step-content">
+            <div class="step-header">
+              <h3>Fill Out Your AI Mapping Document</h3>
+              <span class="step-time">~20 min</span>
+            </div>
+            <p class="step-context">Step 2 of 3</p>
+
+            <p>Before your call, complete the AI mapping document. This helps Ben understand your business, your current workflow, and where AI can make the biggest impact for you.</p>
+
+            <div class="callout callout-info">
+              <strong>Details coming soon.</strong> Ben will provide the AI mapping document and instructions. Check back here or watch for an email with the link.
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card result-success">
+                <div class="result-icon" aria-hidden="true">&#10003;</div>
+                <div>
+                  <strong>You're done when:</strong> Your AI mapping document is completed and submitted.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step" id="pg-step-3">
+          <div class="step-number" aria-hidden="true">3</div>
+          <div class="step-content">
+            <div class="step-header">
+              <h3>Start Your Grounding Package</h3>
+              <span class="step-time">~45 min</span>
+            </div>
+            <p class="step-context">Step 3 of 3</p>
+
+            <p>The grounding package is where Claude gets to know you and your business. It has two parts: a profile interview and a dossier review.</p>
+
+            <h4>Part A: Client Profile</h4>
+            <p>Claude will have a conversation with you &mdash; not a form, an actual back-and-forth interview. It covers your business, responsibilities, tools, pain points, goals, and how you prefer to work with AI.</p>
+            <p>Open a Claude Code terminal panel and type:</p>
+            <div class="code-block code-block--run">
+              <span class="code-block-label">RUN THIS COMMAND</span>
+              <code>Run the client profile interview. Use the client-profile-interview skill. Save my profile to 00 System/CLIENT-PROFILE.md and save progress as we go.</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>Take your time. Be specific and honest &mdash; Claude uses your answers to build your entire AI configuration. If you need to step away, progress is saved automatically.</p>
+
+            <h4>Part B: Your Dossier</h4>
+            <p>After the profile interview, Claude creates a dossier &mdash; a summary of your setup, your business context, and what was accomplished. This gets sent to the team so they know exactly who you are before the program starts.</p>
+            <p>If the dossier wasn't generated automatically, run:</p>
+            <div class="code-block code-block--run">
+              <span class="code-block-label">RUN THIS COMMAND</span>
+              <code>Generate my client dossier. Create it at 00 System/CLIENT-DOSSIER.md with a summary of my profile, vault structure, documents, and setup status. Then show it to me for review before sending.</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>Review the dossier. When you're satisfied:</p>
+            <div class="code-block code-block--run">
+              <span class="code-block-label">APPROVE &amp; SEND</span>
+              <code>The dossier looks good. Send it to the Strategic Profits team.</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+
+            <div class="result-grid">
+              <div class="result-card result-success">
+                <div class="result-icon" aria-hidden="true">&#10003;</div>
+                <div>
+                  <strong>You're done when:</strong> Claude confirms the dossier was sent. The team will review it before your program starts.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Strategic Profits. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function onScroll() {
+      requestAnimationFrame(function() {
+        var h = document.documentElement;
+        var pct = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        document.getElementById('progress-bar').style.transform = 'scaleX(' + (pct || 0) + ')';
+        document.getElementById('nav').classList.toggle('nav-scrolled', window.scrollY > 40);
+        updateStepNav();
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    function updateStepNav() {
+      var steps = document.querySelectorAll('.step');
+      var items = document.querySelectorAll('.steps-nav-item');
+      var current = 0;
+      for (var i = 0; i < steps.length; i++) {
+        if (steps[i].getBoundingClientRect().top < window.innerHeight * 0.5) current = i;
+      }
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.toggle('active', j === current);
+        items[j].classList.toggle('done', j < current);
+      }
+    }
+
+    function copyCode(btn) {
+      var code = btn.parentElement.querySelector('code').textContent;
+      navigator.clipboard.writeText(code).then(function() {
+        btn.classList.add('copied');
+        setTimeout(function() { btn.classList.remove('copied'); }, 1500);
+      });
+    }
+
+    updateStepNav();
+  </script>
+</body>
+</html>
