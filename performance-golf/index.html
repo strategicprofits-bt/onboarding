@@ -93,6 +93,20 @@
             <p>Then run <code>claude</code> in your terminal and follow the sign-in prompts.</p>
 
             <h4>Connect SP Shared MCP</h4>
+            <p>SP Shared is the Strategic Profits platform that gives Claude access to your program&rsquo;s skills, interview tools, and submission system. Connecting it lets Claude run your AI mapping, client profile, and automatically deliver your results to the team.</p>
+            <p><strong>You'll need:</strong> your SP API key (starts with <code>sk_sp_</code>, emailed to you when you enrolled).</p>
+
+            <div class="callout callout-tip" id="api-key-lookup-pg">
+              <strong>Can't find your API key?</strong> Enter your email below and we'll resend it.
+              <form class="key-lookup-form" onsubmit="return lookupKeyPG(event)">
+                <div class="key-lookup-row">
+                  <input type="email" id="key-lookup-email-pg" placeholder="you@example.com" required aria-label="Email address">
+                  <button type="submit" class="key-lookup-btn">Resend my key</button>
+                </div>
+                <div id="key-lookup-result-pg" class="key-lookup-result" aria-live="polite"></div>
+              </form>
+            </div>
+
             <p>Once Claude Code is running, paste this command, replacing <code>YOUR_SP_API_KEY_HERE</code> with your API key:</p>
             <div class="code-block code-block--run">
               <span class="code-block-label">RUN THIS COMMAND</span>
@@ -263,6 +277,33 @@
         btn.classList.add('copied');
         setTimeout(function() { btn.classList.remove('copied'); }, 1500);
       });
+    }
+
+    function lookupKeyPG(e) {
+      e.preventDefault();
+      var email = document.getElementById('key-lookup-email-pg').value.trim();
+      var result = document.getElementById('key-lookup-result-pg');
+      var btn = e.target.querySelector('.key-lookup-btn');
+      if (!email) return false;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      result.className = 'key-lookup-result';
+      result.textContent = '';
+      fetch('https://services.leadconnectorhq.com/hooks/qG6ayaBjKO2G1iyLby2G/webhook-trigger/6939c302-ab4f-4e63-85b5-b93f43a46834', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email })
+      }).then(function() {
+        result.className = 'key-lookup-result key-lookup-success';
+        result.textContent = 'Check your email for your API key.';
+      }).catch(function() {
+        result.className = 'key-lookup-result key-lookup-error';
+        result.textContent = 'Something went wrong. Try again, or email mail@strategicprofits.com for help.';
+      }).finally(function() {
+        btn.disabled = false;
+        btn.textContent = 'Resend my key';
+      });
+      return false;
     }
 
     updateStepNav();
