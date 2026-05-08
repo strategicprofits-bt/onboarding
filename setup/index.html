@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Setup — Strategic Profits</title>
   <meta name="description" content="Set up the workspace where Claude works alongside you. Watch the video or follow step-by-step.">
-  <link rel="stylesheet" href="/style.css?v=20260508b">
+  <link rel="stylesheet" href="/style.css?v=20260508c">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 </head>
 <body>
@@ -104,7 +104,7 @@
             <a href="#step-7" class="steps-nav-item" data-step="7"><span class="steps-nav-num">7</span> Turn on auto mode</a>
             <a href="#step-8" class="steps-nav-item" data-step="8"><span class="steps-nav-num">8</span> Connect your tools</a>
             <a href="#step-9" class="steps-nav-item" data-step="9"><span class="steps-nav-num">9</span> Set up Key Vault</a>
-            <a href="#step-10" class="steps-nav-item" data-step="10"><span class="steps-nav-num">10</span> Connect to SP</a>
+            <a href="#step-10" class="steps-nav-item" data-step="10"><span class="steps-nav-num">10</span> Connect to SP MCP</a>
           </nav>
           <div class="os-toggle" role="radiogroup" aria-label="Operating system">
             <button class="os-btn active" data-os="mac" role="radio" aria-checked="true">Mac</button>
@@ -505,12 +505,12 @@
           <div class="step-number" aria-hidden="true">10</div>
           <div class="step-content">
             <div class="step-header">
-              <h3>Connect to Strategic Profits</h3>
-              <span class="step-time">~3 min</span>
+              <h3>Connect to SP MCP</h3>
+              <span class="step-time">~5 min</span>
             </div>
             <p class="step-context">Step 10 of 10</p>
             <p>This connects Claude to the Strategic Profits platform so it can access your program materials, shared resources, and community tools.</p>
-            <p><strong>You'll need:</strong> your SP API key (starts with <code>sk_sp_</code>, emailed to you when you enrolled).</p>
+            <p><strong>You'll need:</strong> your SP API key (starts with <code>sk_sp_</code>, emailed to you when you enrolled) and <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a> installed on your computer.</p>
 
             <div class="callout callout-tip" id="api-key-lookup-10">
               <strong>Can't find your API key?</strong> Enter your email below and we'll resend it.
@@ -526,18 +526,92 @@
             <p>Choose the method that matches how you're using Claude:</p>
 
             <div class="connect-toggle" role="radiogroup" aria-label="Connection method">
-              <button class="connect-toggle-btn active" onclick="showConnectPath('cli')" role="radio" aria-checked="true">Claude Code (CLI)</button>
-              <button class="connect-toggle-btn" onclick="showConnectPath('desktop')" role="radio" aria-checked="false">Claude Desktop App</button>
+              <button class="connect-toggle-btn" onclick="showConnectPath('cli')" role="radio" aria-checked="false">Claude Code (CLI)</button>
+              <button class="connect-toggle-btn active" onclick="showConnectPath('desktop')" role="radio" aria-checked="true">Claude Desktop App</button>
             </div>
 
-            <div class="connect-path" id="connect-cli">
+            <div class="connect-path" id="connect-cli" style="display:none;">
               <h4 class="substep">Via Claude Code (CLI)</h4>
-              <p><em>Connection instructions coming soon.</em> Ben will add the specific CLI commands and verification steps here.</p>
+              <p>Run this command in your terminal. Replace <code>{{contact.ctd_api_key}}</code> with your actual SP API key:</p>
+              <div class="code-block">
+                <code>claude mcp add-json sp-shared '{"type":"http","url":"https://mcp.strategicprofits.com/mcp","headers":{"Authorization":"Bearer {{contact.ctd_api_key}}"}}' --scope user</code>
+                <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+              <p>That's it. The connection is active immediately.</p>
             </div>
 
-            <div class="connect-path" id="connect-desktop" style="display:none;">
+            <div class="connect-path" id="connect-desktop">
               <h4 class="substep">Via Claude Desktop App</h4>
-              <p><em>Connection instructions coming soon.</em> Ben will add the specific Desktop App steps and verification here.</p>
+              <ol>
+                <li>Go to <strong>Settings</strong> &rarr; <strong>Developer</strong> &rarr; <strong>Edit Config</strong></li>
+                <li>This opens <code>claude_desktop_config.json</code> in your default editor</li>
+                <li>Paste the following, replacing <code>{{contact.ctd_api_key}}</code> with your actual SP API key:</li>
+              </ol>
+              <div class="code-block">
+                <code>{
+  "mcpServers": {
+    "sp-shared": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://mcp.strategicprofits.com/mcp",
+        "--header",
+        "Authorization:${AUTH_HEADER}"
+      ],
+      "env": {
+        "AUTH_HEADER": "Bearer {{contact.ctd_api_key}}"
+      }
+    }
+  }
+}</code>
+                <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+              <ol start="4">
+                <li>Save the file</li>
+              </ol>
+              <div class="os-mac">
+                <ol start="5">
+                  <li>Fully quit Claude Desktop (<kbd>&#8984;</kbd>+<kbd>Q</kbd> — not just close the window)</li>
+                  <li>Reopen Claude Desktop</li>
+                </ol>
+              </div>
+              <div class="os-win">
+                <ol start="5">
+                  <li>Fully quit Claude Desktop (right-click the system tray icon &rarr; Quit — not just close the window)</li>
+                  <li>Reopen Claude Desktop</li>
+                </ol>
+              </div>
+              <div class="callout callout-info">
+                <strong>Why the split <code>--header</code> pattern?</strong> The Authorization header is split across <code>args</code> and <code>env</code> as a workaround for a known parser bug where a space in a single <code>--header</code> value breaks argument parsing.
+              </div>
+            </div>
+
+            <h4 class="substep">E. Verify It's Working</h4>
+            <p>In your Claude Code session, type:</p>
+            <div class="code-block">
+              <code>Tell me my sp-shared status</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>You should see your name, email, and a list of available content. That means you're connected.</p>
+            <p>If you see an error: double-check that you copied your API key correctly and that you restarted Claude Code. If it still doesn't work, email <a href="mailto:mail@strategicprofits.com">mail@strategicprofits.com</a>.</p>
+
+            <h4 class="substep">F. Download Your Materials</h4>
+            <p>Type this into Claude Code:</p>
+            <div class="code-block">
+              <code>Sync my shared content</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>This downloads your program skills and resources directly into Claude Code. Everything you need for Parts 5&ndash;7 comes through here.</p>
+            <div class="callout callout-info">
+              <em>You can run this command again any time to check for updates.</em>
             </div>
 
             <div class="result-grid">
