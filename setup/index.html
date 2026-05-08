@@ -544,49 +544,38 @@
 
             <div class="connect-path" id="connect-desktop">
               <h4 class="substep">Via Claude Desktop App</h4>
-              <ol>
-                <li>Go to <strong>Settings</strong> &rarr; <strong>Developer</strong> &rarr; <strong>Edit Config</strong></li>
-                <li>This opens <code>claude_desktop_config.json</code> in your default editor</li>
-                <li>Paste the following, replacing <code>{{contact.ctd_api_key}}</code> with your actual SP API key:</li>
-              </ol>
+              <p>Run this in Claude Code, replacing <code>{{contact.ctd_api_key}}</code> with your actual SP API key:</p>
+              <div class="code-block code-block--run">
+                <span class="code-block-label">RUN THIS COMMAND</span>
+                <code>Add the sp-shared MCP server to my claude_desktop_config.json file. Here is the config to add:</code>
+                <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+              <p>Then paste this JSON snippet into the same message:</p>
               <div class="code-block">
-                <code>{
-  "mcpServers": {
-    "sp-shared": {
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "https://mcp.strategicprofits.com/mcp",
-        "--header",
-        "Authorization:${AUTH_HEADER}"
-      ],
-      "env": {
-        "AUTH_HEADER": "Bearer {{contact.ctd_api_key}}"
-      }
-    }
+                <code>"sp-shared": {
+  "command": "npx",
+  "args": [
+    "mcp-remote",
+    "https://mcp.strategicprofits.com/mcp",
+    "--header",
+    "Authorization:${AUTH_HEADER}"
+  ],
+  "env": {
+    "AUTH_HEADER": "Bearer {{contact.ctd_api_key}}"
   }
 }</code>
                 <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
                 </button>
               </div>
-              <ol start="4">
-                <li>Save the file</li>
-              </ol>
+              <p>Claude handles the merge &mdash; no manual JSON editing, no comma or bracket issues, and it works even if you already have other MCP servers configured.</p>
               <div class="os-mac">
-                <ol start="5">
-                  <li>Fully quit Claude Desktop (<kbd>&#8984;</kbd>+<kbd>Q</kbd> — not just close the window)</li>
-                  <li>Reopen Claude Desktop</li>
-                </ol>
+                <p>After Claude confirms the update, fully quit Claude Desktop (<kbd>&#8984;</kbd>+<kbd>Q</kbd> &mdash; not just close the window) and reopen it.</p>
               </div>
               <div class="os-win">
-                <ol start="5">
-                  <li>Fully quit Claude Desktop (right-click the system tray icon &rarr; Quit — not just close the window)</li>
-                  <li>Reopen Claude Desktop</li>
-                </ol>
-              </div>
-              <div class="callout callout-info">
-                <strong>Why the split <code>--header</code> pattern?</strong> The Authorization header is split across <code>args</code> and <code>env</code> as a workaround for a known parser bug where a space in a single <code>--header</code> value breaks argument parsing.
+                <p>After Claude confirms the update, fully quit Claude Desktop (right-click the system tray icon &rarr; Quit &mdash; not just close the window) and reopen it.</p>
               </div>
             </div>
 
