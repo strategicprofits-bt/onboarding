@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Setup — Strategic Profits</title>
   <meta name="description" content="Set up the workspace where Claude works alongside you. Watch the video or follow step-by-step.">
-  <link rel="stylesheet" href="/style.css?v=20260508d">
+  <link rel="stylesheet" href="/style.css?v=20260508e">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 </head>
 <body>
@@ -653,160 +653,9 @@
       </div>
     </section>
 
-    <section class="next-steps" id="next-steps">
-      <div class="container">
-        <h2><span id="next-steps-title">Next Steps</span></h2>
-
-        <div class="ns-step" id="ns-client-profile">
-          <div class="ns-step-header">
-            <div class="ns-step-number" aria-hidden="true">1</div>
-            <div>
-              <h3>Client Profile</h3>
-              <span class="ns-step-meta">20&ndash;30 minutes &bull; Interactive session with Claude</span>
-            </div>
-          </div>
-
-          <p>This is where Claude gets to know you. Not the surface-level stuff &mdash; the real picture of your business, how you work, what you're responsible for, and where AI can make the biggest difference.</p>
-          <p>Claude will have a conversation with you. Not a form. Not a questionnaire. An actual back-and-forth conversation where it asks smart follow-up questions based on your answers.</p>
-
-          <h4>What Happens During the Interview</h4>
-          <p>Claude will cover nine areas, roughly in this order:</p>
-          <ol class="ns-interview-list">
-            <li><strong>Identity</strong> &mdash; Your name, business name, what you do</li>
-            <li><strong>Responsibilities</strong> &mdash; What you're actually responsible for day-to-day (this one matters most)</li>
-            <li><strong>Tools</strong> &mdash; What software and systems you currently use</li>
-            <li><strong>Team</strong> &mdash; Who you work with, who reports to you</li>
-            <li><strong>Documents</strong> &mdash; What types of documents you work with regularly</li>
-            <li><strong>Pain Points</strong> &mdash; Where you waste time, what frustrates you</li>
-            <li><strong>Communication</strong> &mdash; How you prefer to work with AI (tone, detail level, etc.)</li>
-            <li><strong>Goals</strong> &mdash; What you want to get out of this program</li>
-            <li><strong>Future Vision</strong> &mdash; Where you see your business going with AI</li>
-          </ol>
-          <p>The more specific and honest you are, the better your system will be. Claude uses your answers to design your vault structure, write your CLAUDE.md configuration, and prepare your client dossier for the Strategic Profits team.</p>
-
-          <h4>How to Run It</h4>
-          <p>Open a Claude Code terminal panel inside Obsidian (from Part 4) and type:</p>
-          <div class="code-block code-block--run">
-            <span class="code-block-label">RUN THIS COMMAND</span>
-            <code>Run the client profile interview. Use the client-profile-interview skill. Save my profile to 00 System/CLIENT-PROFILE.md and save progress as we go.</code>
-            <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
-            </button>
-          </div>
-          <p>Claude will start the conversation. Just answer naturally. Take your time. If you need to step away, Claude saves progress after each section &mdash; you can pick up where you left off.</p>
-
-          <h4>Tips</h4>
-          <ul class="ns-tips">
-            <li>Be specific about your responsibilities &mdash; not &ldquo;marketing&rdquo; but &ldquo;I write all email sequences, manage our Facebook ads, and review landing page copy before it goes live.&rdquo;</li>
-            <li>Don't worry about being polished. Claude works better with real, messy, honest answers than with carefully crafted ones.</li>
-            <li>If Claude asks something you don't have a good answer for, say so. &ldquo;I don't know yet&rdquo; is a perfectly valid answer.</li>
-          </ul>
-        </div>
-
-        <div class="ns-step" id="ns-file-discovery">
-          <div class="ns-step-header">
-            <div class="ns-step-number" aria-hidden="true">2</div>
-            <div>
-              <h3>File Discovery &amp; Organization</h3>
-              <span class="ns-step-meta">30&ndash;60 minutes &bull; Interactive session with Claude</span>
-            </div>
-          </div>
-
-          <p>Now that Claude knows who you are and what you do, it's time to bring your existing documents into the system. Claude will help you find important files on your computer, convert them to Markdown, and organize them into a vault structure designed around your role and responsibilities.</p>
-
-          <h4>What Happens During File Discovery</h4>
-          <ol class="ns-interview-list">
-            <li><strong>Vault Structure</strong> &mdash; Claude proposes numbered folders (02+) based on your profile, asks you to approve or adjust</li>
-            <li><strong>Guided Search</strong> &mdash; Claude scans your common document locations (Desktop, Documents, Downloads) for relevant files</li>
-            <li><strong>Conversion</strong> &mdash; Found files get converted to Markdown and placed in the right folders</li>
-            <li><strong>Review</strong> &mdash; Claude shows you each converted file so you can check it looks right before moving on</li>
-            <li><strong>Cloud Files</strong> &mdash; Claude gives you instructions for downloading files from Google Drive, OneDrive, etc.</li>
-            <li><strong>Completion Report</strong> &mdash; Summary of everything that was brought in</li>
-          </ol>
-
-          <h4>How to Run It</h4>
-          <div class="code-block code-block--run">
-            <span class="code-block-label">RUN THIS COMMAND</span>
-            <code>Run file discovery. Use the file-discovery skill. Load my profile from 00 System/CLIENT-PROFILE.md and help me organize my documents into the vault.</code>
-            <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
-            </button>
-          </div>
-          <p>Claude will walk you through each step. It scans your file system (with your permission), shows you what it found, and asks before moving or converting anything.</p>
-
-          <h4>What Gets Created</h4>
-          <ul class="ns-tips">
-            <li><strong>Custom folders (02, 03, 04...)</strong> &mdash; Based on your ranked responsibilities</li>
-            <li><strong>Converted documents</strong> &mdash; Your existing files, now in Markdown format inside your vault</li>
-            <li><code>00 System/VAULT-SUMMARY.md</code> &mdash; Complete report of what was converted and where it went</li>
-            <li><code>00 System/CLAUDE.md</code> &mdash; Your personal AI configuration file. This is the file Claude reads at the start of every session so it already knows who you are, what you do, and how you like to work. That's all you need to know for now &mdash; we'll go deep on this in the program.</li>
-            <li><strong>Pointer file at vault root</strong> &mdash; A small <code>CLAUDE.md</code> at the top level that points to the full one in 00 System. This way Claude can find your configuration no matter which folder you start in.</li>
-          </ul>
-
-          <h4>Tips</h4>
-          <ul class="ns-tips">
-            <li>You don't need to find every file today. Focus on the ones you use regularly.</li>
-            <li>Claude can resume where it left off &mdash; progress is saved after each responsibility area.</li>
-            <li>If you have files in cloud services, Claude will give you download instructions rather than accessing them directly.</li>
-          </ul>
-        </div>
-
-        <div class="ns-step" id="ns-dossier">
-          <div class="ns-step-header">
-            <div class="ns-step-number" aria-hidden="true">3</div>
-            <div>
-              <h3>Your Dossier</h3>
-              <span class="ns-step-meta">~10 minutes &bull; Review &amp; approve</span>
-            </div>
-          </div>
-
-          <p>Claude has now built a <strong>client dossier</strong> &mdash; a summary of your entire setup, your business context, your vault structure, and what was accomplished during the grounding process. This dossier gets sent to the Strategic Profits team so they know exactly who you are and where you stand before the program starts.</p>
-
-          <h4>What the Dossier Contains</h4>
-          <ul class="ns-tips">
-            <li>Your business profile summary (from the interview)</li>
-            <li>Your responsibilities and pain points</li>
-            <li>Your vault structure and what documents were organized</li>
-            <li>Your CLAUDE.md configuration</li>
-            <li>Your goals for the program</li>
-            <li>Technical setup status (what tools are installed, what's working)</li>
-          </ul>
-
-          <h4>How to Review It</h4>
-          <p>If the dossier wasn't already generated at the end of Part 6, run this:</p>
-          <div class="code-block code-block--run">
-            <span class="code-block-label">RUN THIS COMMAND</span>
-            <code>Generate my client dossier. Create it at 00 System/CLIENT-DOSSIER.md with a summary of my profile, vault structure, documents, and setup status. Then show it to me for review before sending.</code>
-            <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
-            </button>
-          </div>
-          <p>Claude will create the dossier and show you its contents. Read through it. If anything is wrong or missing, tell Claude and it will update the dossier.</p>
-
-          <p>When you're satisfied, tell Claude to send it:</p>
-          <div class="code-block code-block--run">
-            <span class="code-block-label">APPROVE &amp; SEND</span>
-            <code>The dossier looks good. Send it to the Strategic Profits team.</code>
-            <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
-            </button>
-          </div>
-
-          <div class="result-grid">
-            <div class="result-card result-success">
-              <div class="result-icon" aria-hidden="true">&#10003;</div>
-              <div>
-                <strong>How you'll know it worked:</strong> Claude will confirm the dossier was sent and show you a summary of what was delivered. If you want extra confirmation, email <a href="mailto:mail@strategicprofits.com">mail@strategicprofits.com</a> and ask them to confirm receipt.
-              </div>
-            </div>
-          </div>
-
-          <h4>What Happens Next</h4>
-          <p>The Strategic Profits team will review your dossier before the program starts. They'll know your business, your setup, your goals, and your current state. When you walk in (or log in) on Day 1, the team already knows who you are.</p>
-        </div>
-
-      </div>
-    </section>
+    <div class="next-cta">
+      <a href="/next-steps/" class="next-cta-btn" id="continue-btn">Continue: Next Steps &rarr;</a>
+    </div>
 
     <section class="troubleshooting" id="troubleshooting">
       <div class="container">
@@ -1081,15 +930,15 @@
     (function() {
       var m = document.cookie.match(/(?:^|;\s*)sp-program=([^;]+)/);
       var badge = document.getElementById('program-badge');
-      var nsTitle = document.getElementById('next-steps-title');
+      var continueBtn = document.getElementById('continue-btn');
       if (m) {
         var name = decodeURIComponent(m[1]);
         if (badge) {
           badge.textContent = name;
           badge.style.display = 'inline-block';
         }
-        if (nsTitle) {
-          nsTitle.textContent = name + ' Next Steps';
+        if (continueBtn) {
+          continueBtn.textContent = 'Continue: ' + name + ' Next Steps →';
         }
       }
     })();
