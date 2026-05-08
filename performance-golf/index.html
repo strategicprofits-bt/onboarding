@@ -109,12 +109,21 @@
 
             <p>Once Claude Code is running, paste the following into the Claude chat box (not your system terminal), replacing <code>YOUR_SP_API_KEY_HERE</code> with your API key:</p>
             <div class="code-block code-block--run">
-              <span class="code-block-label">RUN THIS COMMAND</span>
+              <span class="code-block-label">PASTE INTO CLAUDE CHAT</span>
               <code>Add this MCP server to my project config: name "sp-shared", URL "https://mcp.strategicprofits.com/mcp", with header "Authorization: Bearer YOUR_SP_API_KEY_HERE". Then run sp_sync in full mode to download shared skills.</code>
               <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
               </button>
             </div>
+
+            <p>Alternatively, if you prefer to configure the server from your terminal, run this command directly (replace <code>YOUR_SP_API_KEY_HERE</code> with your API key):</p>
+            <div class="code-block">
+              <code>claude mcp add --transport http -s project -H "Authorization: Bearer YOUR_SP_API_KEY_HERE" sp-shared https://mcp.strategicprofits.com/mcp</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <p>Then open Claude Code and ask it to <code>run sp_sync in full mode</code> to download shared skills.</p>
 
             <div class="result-grid">
               <div class="result-card result-success">
@@ -136,12 +145,12 @@
             </div>
             <p class="step-context">Step 3 of 4</p>
 
-            <p>The AI opportunity interview maps your team&rsquo;s operations, workflows, and pain points to identify where AI can deliver the most value across your organization.</p>
+            <p>The AI Opportunity Interview maps your team&rsquo;s operations, workflows, and pain points to identify where AI can deliver the most value across your organization.</p>
 
             <p>Open Claude Code and paste the following into the chat box &mdash; Claude will handle the rest:</p>
             <div class="code-block code-block--run">
               <span class="code-block-label">RUN THIS COMMAND</span>
-              <code>Run the AI opportunity interview. Use the ai-opportunity-interview skill. When the interview is complete, submit the results using the sp_submit_ai_opportunity tool.</code>
+              <code>Run the AI Opportunity Interview. Use the ai-opportunity-interview skill. When the interview is complete, submit the results using the sp_submit_ai_opportunity tool.</code>
               <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
               </button>
