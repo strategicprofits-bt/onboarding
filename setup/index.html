@@ -417,7 +417,7 @@
               </form>
             </div>
 
-            <p><strong>SP Shared:</strong> In Claude Desktop, Code tab, type:</p>
+            <p><strong>SP Shared:</strong> Run this after completing <a href="#step-10">Step 10</a>. In Claude Desktop, Code tab, type:</p>
             <div class="code-block">
               <code>/sp-connect sp-mcp</code>
               <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
@@ -532,9 +532,9 @@
 
             <div class="connect-path" id="connect-cli" style="display:none;">
               <h4 class="substep">Via Claude Code (CLI)</h4>
-              <p>Run this command in your terminal. Replace <code>{{contact.ctd_api_key}}</code> with your actual SP API key:</p>
+              <p>Run this command in your terminal. Replace <code>YOUR_SP_API_KEY_HERE</code> with your actual SP API key:</p>
               <div class="code-block">
-                <code>claude mcp add-json sp-shared '{"type":"http","url":"https://mcp.strategicprofits.com/mcp","headers":{"Authorization":"Bearer {{contact.ctd_api_key}}"}}' --scope user</code>
+                <code>claude mcp add-json sp-shared '{"type":"http","url":"https://mcp.strategicprofits.com/mcp","headers":{"Authorization":"Bearer YOUR_SP_API_KEY_HERE"}}' --scope user</code>
                 <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
                 </button>
@@ -544,7 +544,7 @@
 
             <div class="connect-path" id="connect-desktop">
               <h4 class="substep">Via Claude Desktop App</h4>
-              <p>Run this in Claude Code, replacing <code>{{contact.ctd_api_key}}</code> with your actual SP API key:</p>
+              <p>Run this in Claude Code, replacing <code>YOUR_SP_API_KEY_HERE</code> with your actual SP API key:</p>
               <div class="code-block code-block--run">
                 <span class="code-block-label">RUN THIS COMMAND</span>
                 <code>Add the sp-shared MCP server to my claude_desktop_config.json file. Here is the config to add:</code>
@@ -563,7 +563,7 @@
     "Authorization:${AUTH_HEADER}"
   ],
   "env": {
-    "AUTH_HEADER": "Bearer {{contact.ctd_api_key}}"
+    "AUTH_HEADER": "Bearer YOUR_SP_API_KEY_HERE"
   }
 }</code>
                 <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
