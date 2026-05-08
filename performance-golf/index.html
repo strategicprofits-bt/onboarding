@@ -289,13 +289,18 @@
       btn.textContent = 'Sending...';
       result.className = 'key-lookup-result';
       result.textContent = '';
-      fetch('https://services.leadconnectorhq.com/hooks/qG6ayaBjKO2G1iyLby2G/webhook-trigger/6939c302-ab4f-4e63-85b5-b93f43a46834', {
+      fetch('https://mcp.strategicprofits.com/api/lookup-key', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: email })
-      }).then(function() {
-        result.className = 'key-lookup-result key-lookup-success';
-        result.textContent = 'Check your email for your API key.';
+      }).then(function(r) { return r.json(); }).then(function(data) {
+        if (data.success) {
+          result.className = 'key-lookup-result key-lookup-success';
+          result.textContent = 'Check your email for your API key.';
+        } else {
+          result.className = 'key-lookup-result key-lookup-error';
+          result.textContent = data.error || 'Something went wrong. Try again, or email mail@strategicprofits.com for help.';
+        }
       }).catch(function() {
         result.className = 'key-lookup-result key-lookup-error';
         result.textContent = 'Something went wrong. Try again, or email mail@strategicprofits.com for help.';
