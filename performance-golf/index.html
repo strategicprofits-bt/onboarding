@@ -33,8 +33,9 @@
         <aside class="steps-nav" id="steps-nav" aria-label="Step outline">
           <nav>
             <a href="#pg-step-1" class="steps-nav-item" data-step="1"><span class="steps-nav-num">1</span> Book Your Call</a>
-            <a href="#pg-step-2" class="steps-nav-item" data-step="2"><span class="steps-nav-num">2</span> AI Mapping</a>
-            <a href="#pg-step-3" class="steps-nav-item" data-step="3"><span class="steps-nav-num">3</span> Grounding Package</a>
+            <a href="#pg-step-2" class="steps-nav-item" data-step="2"><span class="steps-nav-num">2</span> Set Up Claude</a>
+            <a href="#pg-step-3" class="steps-nav-item" data-step="3"><span class="steps-nav-num">3</span> AI Mapping</a>
+            <a href="#pg-step-4" class="steps-nav-item" data-step="4"><span class="steps-nav-num">4</span> Grounding Package</a>
           </nav>
         </aside>
 
@@ -45,7 +46,7 @@
               <h3>Book Your Call with Ben</h3>
               <span class="step-time">~5 min</span>
             </div>
-            <p class="step-context">Step 1 of 3</p>
+            <p class="step-context">Step 1 of 4</p>
 
             <p>Your first step is a one-on-one call with Ben to map out your AI strategy and make sure you're set up for success.</p>
 
@@ -66,22 +67,31 @@
           <div class="step-number" aria-hidden="true">2</div>
           <div class="step-content">
             <div class="step-header">
-              <h3>Fill Out Your AI Mapping Document</h3>
-              <span class="step-time">~20 min</span>
+              <h3>Set Up Claude</h3>
+              <span class="step-time">~10 min</span>
             </div>
-            <p class="step-context">Step 2 of 3</p>
+            <p class="step-context">Step 2 of 4</p>
 
-            <p>Before your call, complete the AI mapping document. This helps Ben understand your business, your current workflow, and where AI can make the biggest impact for you.</p>
+            <p>You'll need Claude Code installed and connected to the SP Shared MCP server. If you've already done this, skip to Step 3.</p>
 
-            <div class="callout callout-info">
-              <strong>Details coming soon.</strong> Ben will provide the AI mapping document and instructions. Check back here or watch for an email with the link.
+            <h4>Install Claude Code</h4>
+            <p>If you don't have Claude Code yet, install it from <a href="https://claude.ai/download" target="_blank" rel="noopener">claude.ai/download</a> (Desktop app) or run <code>npm install -g @anthropic-ai/claude-code</code> in your terminal (CLI).</p>
+
+            <h4>Connect SP Shared MCP</h4>
+            <p>Open Claude Code and paste this command, replacing <code>YOUR_SP_API_KEY_HERE</code> with your API key:</p>
+            <div class="code-block code-block--run">
+              <span class="code-block-label">RUN THIS COMMAND</span>
+              <code>Add this MCP server to my project config: name "sp-shared", URL "https://mcp.strategicprofits.com/mcp", with header "Authorization: Bearer YOUR_SP_API_KEY_HERE". Then run sp_sync in full mode to download shared skills.</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
+              </button>
             </div>
 
             <div class="result-grid">
               <div class="result-card result-success">
                 <div class="result-icon" aria-hidden="true">&#10003;</div>
                 <div>
-                  <strong>You're done when:</strong> Your AI mapping document is completed and submitted.
+                  <strong>You're done when:</strong> Claude confirms sp_sync completed and skills were downloaded.
                 </div>
               </div>
             </div>
@@ -92,10 +102,51 @@
           <div class="step-number" aria-hidden="true">3</div>
           <div class="step-content">
             <div class="step-header">
+              <h3>Complete Your AI Mapping</h3>
+              <span class="step-time">~20&ndash;30 min</span>
+            </div>
+            <p class="step-context">Step 3 of 4</p>
+
+            <p>Before your call with Ben, complete the AI opportunity interview. This maps out your business, workflows, pain points, and where AI can make the biggest impact for you.</p>
+
+            <p>Open Claude Code and run:</p>
+            <div class="code-block code-block--run">
+              <span class="code-block-label">RUN THIS COMMAND</span>
+              <code>Run the AI opportunity interview. Use the ai-opportunity-interview skill.</code>
+              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+
+            <p>Claude will have a 20&ndash;30 minute conversation with you &mdash; not a form, an actual back-and-forth interview. Answer honestly and specifically. There are no wrong answers. If you need to step away, progress is saved automatically.</p>
+
+            <h4>When You're Done</h4>
+            <p>The interview produces two files:</p>
+            <ul>
+              <li><code>AI-OPPORTUNITY-PROFILE-[YourName]-[Date].md</code> &mdash; your full AI opportunity profile</li>
+              <li><code>COMMAND-CENTER-BRIEF-[YourName]-[Date].md</code> &mdash; your dashboard needs</li>
+            </ul>
+            <p><strong>Forward both files to your supervisor</strong> (email, Slack, or however your team normally shares files). Do this right away so it doesn't slip.</p>
+
+            <div class="result-grid">
+              <div class="result-card result-success">
+                <div class="result-icon" aria-hidden="true">&#10003;</div>
+                <div>
+                  <strong>You're done when:</strong> Both .md files are saved and forwarded to your supervisor.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step" id="pg-step-4">
+          <div class="step-number" aria-hidden="true">4</div>
+          <div class="step-content">
+            <div class="step-header">
               <h3>Start Your Grounding Package</h3>
               <span class="step-time">~45 min</span>
             </div>
-            <p class="step-context">Step 3 of 3</p>
+            <p class="step-context">Step 4 of 4</p>
 
             <p>The grounding package is where Claude gets to know you and your business. It has two parts: a profile interview and a dossier review.</p>
 
