@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get Started — Performance Golf</title>
-  <meta name="description" content="Five steps to get started with Performance Golf AI: book your call, set up Claude, complete your AI mapping, run your client profile, and submit your dossier.">
+  <meta name="description" content="Four steps to get started with Performance Golf AI: book your call, set up Claude, complete your AI mapping, and run your client profile.">
   <link rel="stylesheet" href="/style.css?v=20260508f">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛳</text></svg>">
 </head>
@@ -24,7 +24,7 @@
       <div class="container">
         <div class="hero-badge">Get Started</div>
         <h1>Performance Golf AI Onboarding</h1>
-        <p class="hero-sub">This onboarding configures Claude as your AI working partner, calibrated to your role, your workflows, and your business. The full process takes approximately 75 minutes across five steps.</p>
+        <p class="hero-sub">This onboarding configures Claude as your AI working partner, calibrated to your role, your workflows, and your business. The full process takes approximately 60 minutes across four steps.</p>
         <p class="hero-sub" style="margin-top:0.5rem; font-size:0.95rem; opacity:0.85;">This onboarding is powered by Strategic Profits, Performance Golf&rsquo;s AI implementation partner.</p>
       </div>
     </section>
@@ -37,7 +37,6 @@
             <a href="#pg-step-2" class="steps-nav-item" data-step="2"><span class="steps-nav-num">2</span> Set Up Claude</a>
             <a href="#pg-step-3" class="steps-nav-item" data-step="3"><span class="steps-nav-num">3</span> AI Mapping</a>
             <a href="#pg-step-4" class="steps-nav-item" data-step="4"><span class="steps-nav-num">4</span> Client Profile</a>
-            <a href="#pg-step-5" class="steps-nav-item" data-step="5"><span class="steps-nav-num">5</span> Dossier</a>
           </nav>
         </aside>
 
@@ -48,9 +47,9 @@
               <h3>Book Your Call with Ben</h3>
               <span class="step-time">~5 min</span>
             </div>
-            <p class="step-context">Step 1 of 5</p>
+            <p class="step-context">Step 1 of 4</p>
 
-            <p>Your first step is a one-on-one call with Ben to review your AI mapping results and finalize your implementation plan.</p>
+            <p>Your first step is a one-on-one call with Ben &mdash; a strategy session to review your AI mapping results and finalize your implementation plan. No preparation is required beyond completing Steps 2&ndash;4.</p>
 
             <p>Schedule your call at least 3&ndash;5 days out &mdash; complete Steps 2&ndash;4 before the call so Ben has your results to work from.</p>
 
@@ -74,13 +73,9 @@
               <h3>Set Up Claude</h3>
               <span class="step-time">~10 min</span>
             </div>
-            <p class="step-context">Step 2 of 5</p>
+            <p class="step-context">Step 2 of 4</p>
 
-            <div class="callout callout-info">
-              <strong>Already have Claude Code working?</strong> Skip to Step 3.
-            </div>
-
-            <p>You will need Claude Code installed and connected to the SP Shared MCP server. Choose whichever installation method you prefer.</p>
+            <p>You will need Claude Code installed and connected to the SP Shared MCP server. Choose whichever installation method you prefer. Steps 2B and 2C require basic comfort with a terminal; if you need assistance, your IT team can help.</p>
 
             <h4>Option A: Desktop App</h4>
             <p>Download and install the Claude desktop app from <a href="https://claude.ai/download" target="_blank" rel="noopener">claude.ai/download</a>. Open it and sign in with your Anthropic account.</p>
@@ -100,7 +95,7 @@
             <p><strong>You'll need:</strong> your SP API key (starts with <code>sk_sp_</code>, emailed to you when you enrolled).</p>
 
             <div class="callout callout-tip" id="api-key-lookup-pg">
-              <strong>Can't find your API key?</strong> Enter your email below and we'll resend it.
+              <strong>Need your API key?</strong> Enter your work email below and we will send it to you. If this is your first time here, your API key will be sent to your work email after you submit the form.
               <form class="key-lookup-form" onsubmit="return lookupKeyPG(event)">
                 <div class="key-lookup-row">
                   <input type="email" id="key-lookup-email-pg" placeholder="you@example.com" required aria-label="Email address">
@@ -110,7 +105,7 @@
               </form>
             </div>
 
-            <p>Once Claude Code is running, paste this command, replacing <code>YOUR_SP_API_KEY_HERE</code> with your API key:</p>
+            <p>Once Claude Code is running, paste the following into the Claude chat box (not your system terminal), replacing <code>YOUR_SP_API_KEY_HERE</code> with your API key:</p>
             <div class="code-block code-block--run">
               <span class="code-block-label">RUN THIS COMMAND</span>
               <code>Add this MCP server to my project config: name "sp-shared", URL "https://mcp.strategicprofits.com/mcp", with header "Authorization: Bearer YOUR_SP_API_KEY_HERE". Then run sp_sync in full mode to download shared skills.</code>
@@ -137,11 +132,11 @@
               <h3>Complete Your AI Mapping</h3>
               <span class="step-time">~20&ndash;30 min</span>
             </div>
-            <p class="step-context">Step 3 of 5</p>
+            <p class="step-context">Step 3 of 4</p>
 
             <p>The AI opportunity interview maps your team&rsquo;s operations, workflows, and pain points to identify where AI can deliver the most value across your organization.</p>
 
-            <p>Open Claude Code and run:</p>
+            <p>Open Claude Code and paste the following into the chat box &mdash; Claude will handle the rest:</p>
             <div class="code-block code-block--run">
               <span class="code-block-label">RUN THIS COMMAND</span>
               <code>Run the AI opportunity interview. Use the ai-opportunity-interview skill. When the interview is complete, submit the results using the sp_submit_ai_opportunity tool.</code>
@@ -172,13 +167,13 @@
               <h3>Client Profile</h3>
               <span class="step-time">~20&ndash;30 min</span>
             </div>
-            <p class="step-context">Step 4 of 5</p>
+            <p class="step-context">Step 4 of 4</p>
 
             <p>The AI Mapping interview was about how your team works. This interview is about how <em>you</em> work &mdash; it&rsquo;s what Claude uses to configure itself specifically for you.</p>
 
             <p>This is a deeper interview covering your responsibilities, tools, pain points, goals, and how you prefer to work with AI.</p>
 
-            <p>Open Claude Code and run:</p>
+            <p>Open Claude Code and paste the following into the chat box &mdash; Claude will handle the rest:</p>
             <div class="code-block code-block--run">
               <span class="code-block-label">RUN THIS COMMAND</span>
               <code>Run the client profile interview. Use the client-profile-interview skill. Save my profile to CLIENT-PROFILE.md and save progress as we go. When complete, submit it using sp_submit_onboarding with program "pg".</code>
@@ -202,44 +197,6 @@
           </div>
         </div>
 
-        <div class="step" id="pg-step-5">
-          <div class="step-number" aria-hidden="true">5</div>
-          <div class="step-content">
-            <div class="step-header">
-              <h3>Your Dossier</h3>
-              <span class="step-time">~10 min</span>
-            </div>
-            <p class="step-context">Step 5 of 5</p>
-
-            <p>The dossier is a summary of your setup, your business context, and what was accomplished during onboarding. It is sent to the team so they have full context before your program begins.</p>
-
-            <p>Open Claude Code and run:</p>
-            <div class="code-block code-block--run">
-              <span class="code-block-label">RUN THIS COMMAND</span>
-              <code>Generate my client dossier. Create it at CLIENT-DOSSIER.md with a summary of my profile, documents, and setup status. Then show it to me for review before sending.</code>
-              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-            </div>
-            <p>Review the dossier for accuracy. When you are satisfied:</p>
-            <div class="code-block code-block--run">
-              <span class="code-block-label">APPROVE &amp; SEND</span>
-              <code>The dossier looks good. Submit it using sp_submit_onboarding with file type "dossier" and program "pg".</code>
-              <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
-              </button>
-            </div>
-
-            <div class="result-grid">
-              <div class="result-card result-success">
-                <div class="result-icon" aria-hidden="true">&#10003;</div>
-                <div>
-                  <strong>You're done when:</strong> Claude confirms the dossier was submitted. The team will review it before your program starts.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
       </div>
     </section>
