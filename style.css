@@ -750,6 +750,7 @@ body[data-os="win"] .os-mac { display: none; }
 
 .code-block code {
   display: block;
+  white-space: pre-wrap;
   word-break: break-word;
 }
 

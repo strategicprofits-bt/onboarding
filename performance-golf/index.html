@@ -109,16 +109,32 @@
               </form>
             </div>
 
-            <p>Once Claude Code is running, paste the following into the Claude chat box (not your system terminal), replacing <code>YOUR_SP_API_KEY_HERE</code> with your API key:</p>
+            <h4>Option A: Desktop App Config</h4>
+            <p>In the Claude desktop app, open <strong>Settings &rarr; Developer &rarr; Edit Config</strong> to open your <code>claude_desktop_config.json</code> file. Add the <code>sp-shared</code> entry below (replace <code>YOUR_SP_API_KEY_HERE</code> with your API key):</p>
             <div class="code-block code-block--run">
-              <span class="code-block-label">PASTE INTO CLAUDE CHAT</span>
-              <code>Add this MCP server to my claude_desktop_config.json file: name "sp-shared", URL "https://mcp.strategicprofits.com/mcp", with header "Authorization: Bearer YOUR_SP_API_KEY_HERE". Then run sp_sync in full mode to download shared skills.</code>
+              <span class="code-block-label">ADD TO claude_desktop_config.json</span>
+              <code>{
+  "mcpServers": {
+    "sp-shared": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.strategicprofits.com/mcp",
+        "--header",
+        "Authorization: Bearer YOUR_SP_API_KEY_HERE"
+      ]
+    }
+  }
+}</code>
               <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
               </button>
             </div>
+            <p>If the file already has a <code>mcpServers</code> key, add just the <code>"sp-shared": { &hellip; }</code> block inside it. Save the file and restart Claude Desktop. Then open the <strong>Code</strong> tab and ask Claude to <code>run sp_sync in full mode</code> to download shared skills.</p>
 
-            <p>Alternatively, if you prefer to configure the server from your terminal, run this command directly (replace <code>YOUR_SP_API_KEY_HERE</code> with your API key):</p>
+            <h4>Option B: CLI (Terminal)</h4>
+            <p>If you prefer to configure the server from your terminal, run this command directly (replace <code>YOUR_SP_API_KEY_HERE</code> with your API key):</p>
             <div class="code-block">
               <code>claude mcp add --transport http -s project -H "Authorization: Bearer YOUR_SP_API_KEY_HERE" sp-shared https://mcp.strategicprofits.com/mcp</code>
               <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
@@ -149,9 +165,9 @@
 
             <p>The AI Opportunity Interview maps your team&rsquo;s operations, workflows, and pain points to identify where AI can deliver the most value across your organization.</p>
 
-            <p>Open Claude Code and paste the following into the chat box &mdash; Claude will handle the rest:</p>
+            <p>Open the Claude desktop app, select the <strong>Code</strong> tab, and paste the following &mdash; Claude will handle the rest:</p>
             <div class="code-block code-block--run">
-              <span class="code-block-label">RUN THIS COMMAND</span>
+              <span class="code-block-label">PASTE INTO CODE TAB</span>
               <code>Run the AI Opportunity Interview. Use the ai-opportunity-interview skill. When the interview is complete, submit the results using the sp_submit_ai_opportunity tool.</code>
               <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
@@ -186,9 +202,9 @@
 
             <p>This is a deeper interview covering your responsibilities, tools, pain points, goals, and how you prefer to work with AI.</p>
 
-            <p>Open Claude Code and paste the following into the chat box &mdash; Claude will handle the rest:</p>
+            <p>Open the Claude desktop app, select the <strong>Code</strong> tab, and paste the following &mdash; Claude will handle the rest:</p>
             <div class="code-block code-block--run">
-              <span class="code-block-label">RUN THIS COMMAND</span>
+              <span class="code-block-label">PASTE INTO CODE TAB</span>
               <code>Run the client profile interview. Use the client-profile-interview skill. Save my profile to CLIENT-PROFILE.md and save progress as we go. When complete, submit it using sp_submit_onboarding with program "pg".</code>
               <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy to clipboard">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2v1"/></svg>
